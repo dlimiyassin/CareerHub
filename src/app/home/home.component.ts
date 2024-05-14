@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Candidate } from '../models/candidate.model';
 
 @Component({
   selector: 'app-home',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+ 
 }
