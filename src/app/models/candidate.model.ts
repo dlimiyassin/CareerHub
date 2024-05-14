@@ -6,5 +6,5 @@ export interface Candidate extends Account{
   lastName : string
   phone : string
   cv : string
-  skils: []
+  skils: string[]
 }

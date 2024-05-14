@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Candidate } from '../../models/candidate.model';
 import { CandidateService } from '../../services/candidate.service';
+import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-dash-company',
@@ -11,7 +13,7 @@ export class DashCompanyComponent implements OnInit  {
 
   candidates : Candidate[]=[]
   i : number = 0
-  constructor(private service : CandidateService){
+  constructor(private service : CandidateService, private route : Router, private authService : AuthService){
 
   }
 
@@ -26,12 +28,15 @@ export class DashCompanyComponent implements OnInit  {
     })
   }
 
-  updateCandidate(candidate : Candidate){
-    this.service.updateCandidate(candidate)
-  }
+
 
   delete(id : number){
     this.service.deleteCandidate(id)
   }
 
+  
+signOut(){
+  this.authService.clearLocalStorage()
+  this.route.navigateByUrl("/sign-in")
+}
 }

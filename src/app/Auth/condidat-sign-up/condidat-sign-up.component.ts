@@ -3,6 +3,7 @@ import { AuthService } from '../../services/auth.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Route, Router } from '@angular/router';
 import { Candidate } from '../../models/candidate.model';
+import { Account } from '../../models/account.model';
 
 @Component({
   selector: 'app-condidat-sign-up',
@@ -36,12 +37,18 @@ signUp(){
       email     : this.condidatForm.get('email')?.value,
       password  : this.condidatForm.get('password')?.value,
       role      : "CONDIDAT",
+      LoggedIn  : true,
       cv        : '',
       skils     : []
     }
     this.authService.signUpCandidate(cred).subscribe({
       next: (rep) => {
-        console.log(rep);
+        const user : Account = {
+          email : rep.email,
+          role  : rep.role,
+          LoggedIn : rep.LoggedIn
+        }
+        this.authService.saveToLocalStorage(user)
         this.route.navigateByUrl("/candidate/cv")
         this.condidatForm.reset()
       },

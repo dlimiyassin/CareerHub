@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import { Company } from '../../models/company.model';
+import { Account } from '../../models/account.model';
 
 @Component({
   selector: 'app-company-sign-up',
@@ -39,7 +40,12 @@ offers    : []
 }
 this.authService.signUpCompany(cred).subscribe({
 next: (rep) => {
-console.log(rep);
+const user : Account = {
+  email : rep.email,
+  role  : rep.role,
+  LoggedIn : rep.LoggedIn
+}
+this.authService.saveToLocalStorage(user)
 this.route.navigateByUrl("/company")
 this.companyForm.reset()
 },
@@ -47,4 +53,5 @@ error: (err) => {console.log(err);
 }
 })  
 }
+
 }
