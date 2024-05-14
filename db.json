@@ -1,1 +1,18 @@
 
+{
+  "accounts": [
+    {
+      "id": "1",
+      "email": "condidat@gmail.com",
+      "password": "1234",
+      "role": "condidat"
+    },
+    {
+      "id": "2",
+      "email": "company@gmail.com",
+      "password": "1234",
+      "role": "company"
+    }
+  ]
+}
+

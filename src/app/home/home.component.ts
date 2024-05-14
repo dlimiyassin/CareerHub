@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Candidate } from '../models/candidate.model';
 
@@ -7,6 +8,9 @@ import { Candidate } from '../models/candidate.model';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  constructor(private http : HttpClient){}
+ngOnInit(): void {
 
  
+}
 }
