@@ -1,23 +1,27 @@
 <body>
     <div class="form-container">
         <p class="title">Sign Up As Company</p>
-        <form class="form">
+        <form [formGroup]="companyForm" (ngSubmit)="signUp()" class="form">
             <div class="input-group">
                 <label for="companyName">Company Name</label>
-                <input type="text" name="companyName" id="companyName" placeholder="">
+                <input type="text" name="companyName" id="companyName" formControlName="companyName">
+            </div>
+            <div class="input-group">
+                <label for="phone">Phone</label>
+                <input type="text" name="phone" id="phone" formControlName="phone">
             </div>
             <div class="input-group">
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="">
+                <input type="email" name="email" id="email" formControlName="email">
             </div>
             <div class="input-group">
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password" placeholder="">
+                <input type="password" name="password" id="password" formControlName="password">
                 <div class="forgot">
                     <a rel="noopener noreferrer" href="#">Forgot Password ?</a>
                 </div>
             </div>
-            <button class="sign">Sign Up</button>
+            <button type="submit" class="sign">Sign Up</button>
         </form>
     </div>
         

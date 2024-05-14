@@ -10,6 +10,8 @@ import { CompanySignUpComponent } from './Auth/company-sign-up/company-sign-up.c
 import { CondidatSignUpComponent } from './Auth/condidat-sign-up/condidat-sign-up.component';
 import { SignInComponent } from './Auth/sign-in/sign-in.component';
 import { ChooseSignMethodComponent } from './Auth/choose-sign-method/choose-sign-method.component';
+import { DashCondidatComponent } from './condidat/dash-condidat/dash-condidat.component';
+import { DashCompanyComponent } from './company/dash-company/dash-company.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { ChooseSignMethodComponent } from './Auth/choose-sign-method/choose-sign
     CompanySignUpComponent,
     CondidatSignUpComponent,
     SignInComponent,
-    ChooseSignMethodComponent
+    ChooseSignMethodComponent,
+    DashCondidatComponent,
+    DashCompanyComponent
   ],
   imports: [
     BrowserModule,

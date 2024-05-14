@@ -1,31 +1,31 @@
 <body>
     <div class="form-container">
         <p class="title">Sign Up As Condidat</p>
-        <form class="form">
+        <form [formGroup]="condidatForm" (ngSubmit)="signUp()" class="form">
             <div class="input-group">
                 <label for="firstName">FirstName</label>
-                <input type="text" firstName="firstName" id="firstName" placeholder="">
+                <input type="text" firstName="firstName" id="firstName" formControlName="firstName">
             </div>
             <div class="input-group">
                 <label for="lastName">LastName</label>
-                <input type="text" lastName="lastName" id="lastName" placeholder="">
+                <input type="text" lastName="lastName" id="lastName" formControlName="lastName">
             </div>
             <div class="input-group">
                 <label for="phone">Phone</label>
-                <input type="text" phone="phone" id="phone" placeholder="">
+                <input type="text" phone="phone" id="phone" formControlName="phone">
             </div>
             <div class="input-group">
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="">
+                <input type="email" name="email" id="email" formControlName="email">
             </div>
             <div class="input-group">
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password" placeholder="">
+                <input type="password" name="password" id="password" formControlName="password">
                 <div class="forgot">
                     <a rel="noopener noreferrer" href="#">Forgot Password ?</a>
                 </div>
             </div>
-            <button class="sign">Sign Up</button>
+            <button type="submit" class="sign">Sign Up</button>
         </form>
     </div>
         
