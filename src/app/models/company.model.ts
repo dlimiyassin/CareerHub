@@ -4,7 +4,8 @@ import { Offer } from "./offer.model";
 
 export interface Company extends Account{
   id : number
-  name : string
+  companyName : string
+  phone : string
   offers : Offer[]
 
 }

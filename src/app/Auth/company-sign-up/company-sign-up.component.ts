@@ -29,7 +29,6 @@ password  : [null,[Validators.minLength(4),Validators.maxLength(12)]]
 signUp(){
 const cred = {
 companyName : this.companyForm.get('companyName')?.value,
-lastName  : this.companyForm.get('lastName')?.value,
 phone     : this.companyForm.get('phone')?.value,
 email     : this.companyForm.get('email')?.value,
 password  : this.companyForm.get('password')?.value,
