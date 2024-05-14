@@ -2,14 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 
-import { CandidateComponent } from './candidate/candidate.component';
-
 import { CompanySignUpComponent } from './Auth/company-sign-up/company-sign-up.component';
 import { CondidatSignUpComponent } from './Auth/condidat-sign-up/condidat-sign-up.component';
 import { SignInComponent } from './Auth/sign-in/sign-in.component';
 import { ChooseSignMethodComponent } from './Auth/choose-sign-method/choose-sign-method.component';
 import { DashCondidatComponent } from './condidat/dash-condidat/dash-condidat.component';
 import { DashCompanyComponent } from './company/dash-company/dash-company.component';
+import { CompleteProfileComponent } from './condidat/complete-profile/complete-profile.component';
 
 const routes: Routes = [
   {path:'', component:HomeComponent, title: 'Home'},
@@ -17,8 +16,19 @@ const routes: Routes = [
   {path:'condidat-sign-up', component:CondidatSignUpComponent, title: 'Sign Up'},
   {path:'choose-sign', component:ChooseSignMethodComponent, title: 'Sign Up'},
   {path:'sign-in', component:SignInComponent, title: 'Sign Up'},
-  {path:'candidate', component : DashCondidatComponent},
-  {path:'company', component:DashCompanyComponent, title: 'Dashboard'}
+
+
+  {path:'candidate',
+   children : [
+    {path:'', component:DashCondidatComponent, title:'Dashboard'},
+    {path:'cv', component:CompleteProfileComponent, title:'Profile'}
+
+  ]},
+
+  {path:'company',
+  children : [
+   {path:'', component:DashCompanyComponent, title:'Dashboard'}
+ ]},
 
 ];
 

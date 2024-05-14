@@ -1,6 +1,6 @@
 export interface Account{
-  role : string
   email : string
   password : string
+  role : string
   LoggedIn? : boolean
 }

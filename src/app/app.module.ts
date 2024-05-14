@@ -12,6 +12,7 @@ import { SignInComponent } from './Auth/sign-in/sign-in.component';
 import { ChooseSignMethodComponent } from './Auth/choose-sign-method/choose-sign-method.component';
 import { DashCondidatComponent } from './condidat/dash-condidat/dash-condidat.component';
 import { DashCompanyComponent } from './company/dash-company/dash-company.component';
+import { CompleteProfileComponent } from './condidat/complete-profile/complete-profile.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { DashCompanyComponent } from './company/dash-company/dash-company.compon
     SignInComponent,
     ChooseSignMethodComponent,
     DashCondidatComponent,
-    DashCompanyComponent
+    DashCompanyComponent,
+    CompleteProfileComponent
   ],
   imports: [
     BrowserModule,

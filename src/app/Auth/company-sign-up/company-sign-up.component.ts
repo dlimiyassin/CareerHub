@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
+import { Company } from '../../models/company.model';
 
 @Component({
   selector: 'app-company-sign-up',
@@ -27,14 +28,16 @@ password  : [null,[Validators.minLength(4),Validators.maxLength(12)]]
 
 
 signUp(){
-const cred = {
+const cred : Company = {
 companyName : this.companyForm.get('companyName')?.value,
 phone     : this.companyForm.get('phone')?.value,
 email     : this.companyForm.get('email')?.value,
 password  : this.companyForm.get('password')?.value,
-role      : "Company"
+role      : "Company",
+LoggedIn  : true,
+offers    : []
 }
-this.authService.signUp(cred).subscribe({
+this.authService.signUpCompany(cred).subscribe({
 next: (rep) => {
 console.log(rep);
 this.route.navigateByUrl("/company")

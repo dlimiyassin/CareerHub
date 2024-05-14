@@ -1,19 +1,56 @@
-
 {
-  "accounts": [
+  "candidates": [
     {
       "id": "1",
       "email": "condidat@gmail.com",
       "password": "1234",
-      "role": "condidat",
-      "signed" : true
-    },
+      "role": "CANDIDATE",
+      "LoggedIn": false,
+      "firstName": "yassine",
+      "lastName": "dlimi",
+      "phone": "0623456789",
+      "cv": "cv",
+      "skills": [
+        "java",
+        "angular"
+      ]
+    }
+  ],
+  "companies": [
     {
-      "id": "2",
+      "id": "1",
       "email": "company@gmail.com",
       "password": "1234",
-      "role": "company"
+      "role": "COMPANY",
+      "LoggedIn": false,
+      "companyName": "yassine",
+      "phone": "0623456789",
+      "offers": [
+        {
+          "title": "devlopper",
+          "description": "java",
+          "salary": "8000",
+          "place": "Casablaca"
+        }
+      ]
+    },
+    {
+      "id": "17c7",
+      "companyName": "test",
+      "phone": "0644832235",
+      "email": "dlimiyassine13@gmail.com",
+      "password": "dfgjkl",
+      "role": "Company",
+      "LoggedIn": true,
+      "offers": []
+    }
+  ],
+  "postulations": [
+    {
+      "id": "1",
+      "offer": "offer",
+      "Candidate": "1234",
+      "date": "2023"
     }
   ]
 }
-

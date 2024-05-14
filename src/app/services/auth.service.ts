@@ -9,8 +9,11 @@ export class AuthService {
 
   constructor(private http : HttpClient) { }
 
-  signUp(credentials : any) : Observable<Object> {
-    return this.http.post<Object>("http://localhost:3000/accounts",credentials)
+  signUpCompany(credentials : any) : Observable<Object> {
+    return this.http.post<Object>("http://localhost:3000/companies",credentials)
+  }
+  signUpCandidate(credentials : any) : Observable<Object> {
+    return this.http.post<Object>("http://localhost:3000/candidates",credentials)
   }
   getAccounts() : Observable<[]> {
     return this.http.get<[]>("http://localhost:3000/accounts")
