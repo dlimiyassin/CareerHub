@@ -7,7 +7,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 
-import { CandidateComponent } from './candidate/candidate.component';
 
 import { CompanySignUpComponent } from './Auth/company-sign-up/company-sign-up.component';
 import { CondidatSignUpComponent } from './Auth/condidat-sign-up/condidat-sign-up.component';
@@ -15,6 +14,10 @@ import { SignInComponent } from './Auth/sign-in/sign-in.component';
 import { ChooseSignMethodComponent } from './Auth/choose-sign-method/choose-sign-method.component';
 import { DashCondidatComponent } from './condidat/dash-condidat/dash-condidat.component';
 import { DashCompanyComponent } from './company/dash-company/dash-company.component';
+import { OfferCompanyComponent } from './company/offer-company/offer-company.component';
+import { CandidateCompanyComponent } from './company/candidate-company/candidate-company.component';
+import { OfferCandidateComponent } from './condidat/offer-candidate/offer-candidate.component';
+import { CandidatePostulerCompanyComponent } from './company/candidate-postuler-company/candidate-postuler-company.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { DashCompanyComponent } from './company/dash-company/dash-company.compon
     ChooseSignMethodComponent,
     DashCondidatComponent,
     DashCompanyComponent,
-    CandidateComponent
+    OfferCompanyComponent,
+    CandidateCompanyComponent,
+    OfferCandidateComponent,
+    CandidatePostulerCompanyComponent,
   ],
   imports: [
     BrowserModule,
