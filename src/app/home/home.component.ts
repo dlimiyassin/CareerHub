@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { Candidate } from '../models/candidate.model';
 
 @Component({
   selector: 'app-home',
@@ -10,5 +11,6 @@ export class HomeComponent {
   constructor(private http : HttpClient){}
 ngOnInit(): void {
 
+ 
 }
 }

@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+
+import { CandidateComponent } from './candidate/candidate.component';
+
 import { CompanySignUpComponent } from './Auth/company-sign-up/company-sign-up.component';
 import { CondidatSignUpComponent } from './Auth/condidat-sign-up/condidat-sign-up.component';
 import { SignInComponent } from './Auth/sign-in/sign-in.component';
@@ -14,8 +17,9 @@ const routes: Routes = [
   {path:'condidat-sign-up', component:CondidatSignUpComponent, title: 'Sign Up'},
   {path:'choose-sign', component:ChooseSignMethodComponent, title: 'Sign Up'},
   {path:'sign-in', component:SignInComponent, title: 'Sign Up'},
-  {path:'condidate', component:DashCondidatComponent, title: 'Dashboard'},
+  {path:'candidate', component : DashCondidatComponent},
   {path:'company', component:DashCompanyComponent, title: 'Dashboard'}
+
 ];
 
 @NgModule({

@@ -1,7 +1,10 @@
 import { Account } from "./account.model";
 
-export interface Company{
+import { Offer } from "./offer.model";
 
-  account : Account
+export interface Company extends Account{
+  id : number
+  name : string
+  offers : Offer[]
 
 }

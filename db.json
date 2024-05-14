@@ -1,3 +1,4 @@
+
 {
   "accounts": [
     {
@@ -12,48 +13,7 @@
       "email": "company@gmail.com",
       "password": "1234",
       "role": "company"
-    },
-    {
-      "id": "44ef",
-      "firstName": "yassine",
-      "lastName": "dlimi",
-      "phone": "0644832235",
-      "email": "dlimiyassine13@gmail.com",
-      "password": "uyivhlk",
-      "role": "CONDIDAT"
-    },
-    {
-      "id": "92a7",
-      "companyName": "puipiugpui",
-      "phone": "0644832235",
-      "email": "dlimiyassine13@gmail.com",
-      "password": "puigåipgut7",
-      "role": "Company"
-    },
-    {
-      "id": "8a5c",
-      "companyName": "puipiugpui",
-      "phone": "0644832235",
-      "email": "dlimiyassine13@gmail.com",
-      "password": "fgsdsdg",
-      "role": "Company"
-    },
-    {
-      "id": "babc",
-      "firstName": "yassine",
-      "lastName": "dlimi",
-      "phone": null,
-      "email": "itsdlimintoos99@gmail.com",
-      "password": null,
-      "role": "CONDIDAT"
-    },
-    {
-      "id": "f03a",
-      "companyName": "puipiugpui",
-      "phone": "0644832235",
-      "email": "dlimiyassine13@gmail.com",
-      "password": null,
-      "role": "Company"
     }
   ]
 }
+
