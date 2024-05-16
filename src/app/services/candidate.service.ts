@@ -7,7 +7,7 @@ import { Candidate } from '../models/candidate.model';
   providedIn: 'root'
 })
 export class CandidateService {
-  private api = 'http://localhost:3000/candidate';
+  private api = 'http://localhost:3000/candidates';
 
   constructor(private http : HttpClient) { }
 

@@ -18,24 +18,32 @@ export class OfferService {
 
   constructor(private http : HttpClient) { }
 
-  addOffer(offer : Offer){
-    this.http.post(this.api,offer)
+  addOffer(crenditials : any) : Observable<any>{
+  return  this.http.post<Object>(this.api,crenditials)
   }
 
   getAllOffers() : Observable<any>{
     return this.http.get(this.api)
   }
 
-  getOfferById(id : number) : Observable<any> {
+  updateOffer(offer : Offer,id : number) : Observable<any>{
+    return this.http.put(`${this.api}/${id}`,offer)
+  }
+
+  deleteOffer(id? : number) : Observable<any>{
+    return this.http.delete(`${this.api}/${id}`)
+  }
+
+  getOfferById(id? : number) : Observable<any> {
     return this.http.get(`${this.api}/${id}`)
   }
 
   getCandidatesPostuler(id : number) : Observable<any>{
-  return this.http.get<Postulation[]>(this.apiP).pipe(
-    map((postulations : Postulation[])=>
-    postulations
-    .filter(postulation=> postulation.offer.id = id )
-    .map(postulation => postulation.candidate)
-  ))
-  }
+    return this.http.get<Postulation[]>(this.apiP).pipe(
+      map((postulations : Postulation[])=>
+      postulations
+      .filter(postulation=> postulation.offer.id = id )
+      .map(postulation => postulation.candidate)
+    ))
+    }
 }

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Route, Router } from '@angular/router';
+import { Candidate } from '../../models/candidate.model';
 
 @Component({
   selector: 'app-condidat-sign-up',
@@ -28,18 +29,20 @@ condidatForm : FormGroup = this.fromBuilder.group({
 
 
 signUp(){
-    const cred = {
+    const cred : Candidate = {
       firstName : this.condidatForm.get('firstName')?.value,
       lastName  : this.condidatForm.get('lastName')?.value,
       phone     : this.condidatForm.get('phone')?.value,
       email     : this.condidatForm.get('email')?.value,
       password  : this.condidatForm.get('password')?.value,
-      role      : "CONDIDAT"
+      role      : "CONDIDAT",
+      cv        : '',
+      skils     : []
     }
-    this.authService.signUp(cred).subscribe({
+    this.authService.signUpCandidate(cred).subscribe({
       next: (rep) => {
         console.log(rep);
-        this.route.navigateByUrl("/condidate")
+        this.route.navigateByUrl("/candidate/cv")
         this.condidatForm.reset()
       },
       error: (err) => {console.log(err);

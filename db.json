@@ -1,18 +1,76 @@
-
 {
-  "accounts": [
+  "candidates": [
     {
       "id": "1",
       "email": "condidat@gmail.com",
       "password": "1234",
-      "role": "condidat"
+      "role": "CANDIDATE",
+      "LoggedIn": false,
+      "firstName": "yassine",
+      "lastName": "dlimi",
+      "phone": "0623456789",
+      "cv": "cv",
+      "skills": [
+        "java",
+        "angular"
+      ]
     },
     {
-      "id": "2",
+      "id": "d35e",
+      "firstName": "Mourad",
+      "lastName": "KADRAOUI",
+      "phone": "0697670749",
+      "email": "mouradadezz@gmail.com",
+      "password": "1234",
+      "role": "CONDIDAT",
+      "cv": "",
+      "skils": []
+    }
+  ],
+  "companies": [
+    {
+      "id": "1",
       "email": "company@gmail.com",
       "password": "1234",
-      "role": "company"
+      "role": "COMPANY",
+      "LoggedIn": false,
+      "companyName": "yassine",
+      "phone": "0623456789",
+      "offers": [
+        {
+          "title": "devlopper",
+          "description": "java",
+          "salary": "8000",
+          "place": "Casablaca"
+        }
+      ]
+    },
+    {
+      "id": "17c7",
+      "companyName": "test",
+      "phone": "0644832235",
+      "email": "dlimiyassine13@gmail.com",
+      "password": "dfgjkl",
+      "role": "Company",
+      "LoggedIn": true,
+      "offers": []
+    }
+  ],
+  "postulations": [
+    {
+      "id": "1",
+      "offer": "offer",
+      "Candidate": "1234",
+      "date": "2023"
+    }
+  ],
+  "offers": [
+    {
+      "id": "8f11",
+      "title": "Java",
+      "place": "rabat",
+      "salary": "2000",
+      "description": "dsmfùlfmlgdfg"
     }
   ]
 }
-

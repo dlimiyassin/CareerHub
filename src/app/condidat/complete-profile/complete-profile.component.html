@@ -1,0 +1,21 @@
+<body>
+    <div class="form-container">
+        <p class="title">Complete Profile</p>
+        <form  (ngSubmit)="completeProfile()" class="form">
+            <div class="input-group">
+                <input type="email" name="email" id="email" [(ngModel)]="newSkill" placeholder="Add Skill">
+                <button (click)="addSkill()">add</button>
+            </div>
+
+            <ul>
+                @for (skill of skills; track $index) {
+                    <li>{{skill}}</li>
+                }
+            </ul>
+
+            <button type="submit" class="sign">Finish</button>
+        </form>
+    </div>
+        
+    </body>
+    

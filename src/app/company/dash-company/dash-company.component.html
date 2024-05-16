@@ -1,18 +1,11 @@
-<div class="row" *ngFor="let c of candidates">
-  <div class="col-4">
-    <div class="card" style="width: 18rem;">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">{{c.firstName}} {{c.lastName}} </h5>
-        <div *ngFor="let i of c.skils">
-          <p class="card-text">{{i.name}}</p>
-        </div>
-
-
-
-
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
+<nav class="nav nav-pills justify-content-between">
+  <p class="title">Career Hub</p>
+  <button routerLink="/company/offer" class="btn mx-3">Offer</button>
+  <button routerLink="/company/candidate" class="btn mx-3">Candidates</button>
+  <div class="d-block">
+  <button routerLink="/sign-in" class="btn mx-3">Sign Out</button>
   </div>
-</div>
+
+</nav>
+
+
