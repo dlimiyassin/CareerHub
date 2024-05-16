@@ -15,6 +15,55 @@
       ]
     },
     {
+
+      "id": "a8a4",
+      "firstName": "yassine",
+      "lastName": "dlimi",
+
+      "phone": "0623456789",
+      "cv": "cv",
+      "skills": [
+        "java",
+        "angular"
+      ]
+    },
+    {
+      "id": "d35e",
+      "firstName": "Mourad",
+      "lastName": "KADRAOUI",
+      "phone": "0644832235",
+      "email": "dlimiyassine13@gmail.com",
+      "password": "fghjsk",
+      "role": "CONDIDAT",
+      "LoggedIn": true,
+      "cv": "",
+      "skils": []
+    },
+    {
+      "id": "a3b2",
+      "firstName": "yassine",
+      "lastName": "dlimi",
+      "phone": "0644832235",
+      "email": "dlimiyassine13@gmail.com",
+      "password": null,
+      "role": "CONDIDAT",
+      "LoggedIn": true,
+      "cv": "",
+      "skils": []
+    },
+    {
+      "id": "0456",
+      "firstName": "yassine",
+      "lastName": "dlimi",
+      "phone": "0644832235",
+      "email": "dlimiyassine13@gmail.com",
+      "password": null,
+      "role": "CONDIDAT",
+      "LoggedIn": true,
+      "cv": "",
+      "skils": []
+    },
+    {
       "id": "2552",
       "firstName": "Yassine",
       "lastName": "Dlimi",
@@ -46,6 +95,7 @@
       "email": null,
       "password": null,
       "role": "CONDIDAT",
+
       "LoggedIn": false,
       "cv": "",
       "skils": []
@@ -122,6 +172,15 @@
       "offer": "offer",
       "Candidate": "1234",
       "date": "2023"
+    }
+  ],
+  "offers": [
+    {
+      "id": "8f11",
+      "title": "Java",
+      "place": "rabat",
+      "salary": "2000",
+      "description": "dsmfùlfmlgdfg"
     }
   ]
 }

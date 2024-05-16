@@ -1,0 +1,106 @@
+<nav class="nav nav-pills justify-content-between">
+  <p class="title">Career Hub</p>
+  <button routerLink="/company/offer" class="btn mx-3">Offer</button>
+  <button routerLink="/company/candidate" class="btn mx-3">Candidates</button>
+  <div class="d-block">
+  <button routerLink="/sign-in" class="btn mx-3">Sign Out</button>
+  </div>
+</nav>
+
+
+<div class="container">
+  <button type="button" class="btn btn-primary" (click)="openModal(template)">
+    Add Offer
+  </button>
+  <table class="table mt-5">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">title</th>
+      <th scope="col">place</th>
+      <th scope="col">salary</th>
+      <th scope="col">action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let o of offers ; let i = index">
+      <th scope="row">{{i+1}}</th>
+      <td>{{o.title}}</td>
+      <td>{{o.place}}</td>
+      <td>{{o.salary}}</td>
+      <td>
+        <button (click)="openUpdate(templateEdit,o.id)" class="btn edit"><i class="bi bi-pencil-square"></i></button>
+        <button (click)="delete(o.id)" class="btn supp mx-2"><i class="bi bi-trash"></i></button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+<!-- Modal Template -->
+<ng-template #template>
+  <div class="modal-header">
+    <h5 class="modal-title">Add Offer</h5>
+    <button type="button" class="btn-close" (click)="modal?.hide()" aria-label="Close"></button>
+  </div>
+
+  <div class="modal-body">
+    <form [formGroup]="form" (ngSubmit)="addOffer()">
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" formControlName="title" class="form-control" id="title">
+      </div>
+      <div class="mb-3">
+        <label for="place" class="form-label">Place</label>
+        <input type="place" formControlName="place" class="form-control" id="place">
+      </div>
+      <div class="mb-3">
+        <label for="salary" class="form-label">Salary</label>
+        <input type="text" formControlName="salary" class="form-control" id="salary">
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <input type="textarea" formControlName="description" class="form-control" id="description">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="modal?.hide()">Close</button>
+        <button type="submit" [disabled]="!form.valid" class="btn btn-primary">Add</button>
+      </div>
+    </form>
+  </div>
+</ng-template>
+
+<!-- Modal Edit -->
+
+<ng-template #templateEdit>
+  <div class="modal-header">
+    <h5 class="modal-title">Edit Offer</h5>
+    <button type="button" class="btn-close" (click)="modal?.hide()" aria-label="Close"></button>
+  </div>
+
+  <div class="modal-body">
+    <form [formGroup]="edit" (ngSubmit)="update()">
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" formControlName="title" class="form-control" id="title">
+      </div>
+      <div class="mb-3">
+        <label for="place" class="form-label">Place</label>
+        <input type="place" formControlName="place" class="form-control" id="place">
+      </div>
+      <div class="mb-3">
+        <label for="salary" class="form-label">Salary</label>
+        <input type="text" formControlName="salary" class="form-control" id="salary">
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <input type="textarea" formControlName="description" class="form-control" id="description">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="modal?.hide()">Close</button>
+        <button type="submit" [disabled]="!edit.valid" class="btn btn-primary">Add</button>
+      </div>
+    </form>
+  </div>
+</ng-template>

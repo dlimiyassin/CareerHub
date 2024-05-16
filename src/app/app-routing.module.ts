@@ -9,6 +9,9 @@ import { ChooseSignMethodComponent } from './Auth/choose-sign-method/choose-sign
 import { DashCondidatComponent } from './condidat/dash-condidat/dash-condidat.component';
 import { DashCompanyComponent } from './company/dash-company/dash-company.component';
 import { CompleteProfileComponent } from './condidat/complete-profile/complete-profile.component';
+import { OfferCompanyComponent } from './company/offer-company/offer-company.component';
+import { CandidateCompanyComponent } from './company/candidate-company/candidate-company.component';
+import { CandidatePostulerCompanyComponent } from './company/candidate-postuler-company/candidate-postuler-company.component';
 
 const routes: Routes = [
   {path:'', component:HomeComponent, title: 'Home'},
@@ -27,7 +30,10 @@ const routes: Routes = [
 
   {path:'company',
   children : [
-   {path:'', component:DashCompanyComponent, title:'Dashboard'}
+   {path:'', component:DashCompanyComponent, title:'Dashboard'},
+   {path:'offer', component : OfferCompanyComponent, title : 'Offer'},
+   {path : 'candidate', component : CandidateCompanyComponent , title :'candidate'},
+   {path : 'candidate-post/:id', component : CandidatePostulerCompanyComponent}
  ]},
 
 ];
