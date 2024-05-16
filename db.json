@@ -3,7 +3,7 @@
     {
       "id": "1",
       "email": "dlimiyassine13@gmail.com",
-      "password": "teeest",
+      "password": "12345",
       "role": "teeest",
       "LoggedIn": false,
       "firstName": "",
@@ -15,74 +15,74 @@
       ]
     },
     {
-      "id": "a8a4",
-      "firstName": "yassine",
-      "lastName": "dlimi",
-      "phone": "0644832235",
-      "email": "dlimiyassine13@gmail.com",
-      "password": "fghjsk",
-      "role": "CONDIDAT",
-      "LoggedIn": true,
-      "cv": "",
-      "skils": []
-    },
-    {
-      "id": "a3b2",
-      "firstName": "yassine",
-      "lastName": "dlimi",
-      "phone": "0644832235",
-      "email": "dlimiyassine13@gmail.com",
-      "password": null,
-      "role": "CONDIDAT",
-      "LoggedIn": true,
-      "cv": "",
-      "skils": []
-    },
-    {
-      "id": "0456",
-      "firstName": "yassine",
-      "lastName": "dlimi",
-      "phone": "0644832235",
-      "email": "dlimiyassine13@gmail.com",
-      "password": null,
-      "role": "CONDIDAT",
-      "LoggedIn": true,
-      "cv": "",
-      "skils": []
-    },
-    {
       "id": "2552",
       "firstName": "Yassine",
       "lastName": "Dlimi",
       "phone": "0644832235",
       "email": "dlimiyassine08@gmail.com",
-      "password": null,
+      "password": "1234",
       "role": "CONDIDAT",
       "LoggedIn": true,
       "cv": "",
       "skils": []
     },
     {
-      "id": "210b",
-      "firstName": "yassine",
-      "lastName": "dlimi",
+      "id": "3905",
+      "firstName": "Yassine",
+      "lastName": "Dlimi",
       "phone": "0644832235",
-      "email": "dlimiyassine13@gmail.com",
-      "password": null,
+      "email": "itsmyspace0029@gmail.com",
+      "password": "123456",
       "role": "CONDIDAT",
-      "LoggedIn": true,
+      "LoggedIn": false,
       "cv": "",
       "skils": []
     },
     {
-      "id": "c296",
-      "firstName": "yassine",
-      "lastName": "dlimi",
-      "phone": "0644832235",
-      "email": "dlimiyassine13@gmail.com",
+      "id": "cc43",
+      "firstName": null,
+      "lastName": null,
+      "phone": null,
+      "email": null,
       "password": null,
       "role": "CONDIDAT",
-      "LoggedIn": true,
+      "LoggedIn": false,
+      "cv": "",
+      "skils": []
+    },
+    {
+      "id": "1b60",
+      "firstName": null,
+      "lastName": null,
+      "phone": null,
+      "email": null,
+      "password": null,
+      "role": "CONDIDAT",
+      "LoggedIn": false,
+      "cv": "",
+      "skils": []
+    },
+    {
+      "id": "5cd1",
+      "firstName": null,
+      "lastName": null,
+      "phone": null,
+      "email": null,
+      "password": null,
+      "role": "CONDIDAT",
+      "LoggedIn": false,
+      "cv": "",
+      "skils": []
+    },
+    {
+      "id": "9b09",
+      "firstName": null,
+      "lastName": null,
+      "phone": null,
+      "email": null,
+      "password": null,
+      "role": "CONDIDAT",
+      "LoggedIn": false,
       "cv": "",
       "skils": []
     }
@@ -104,6 +104,16 @@
           "place": "Casablaca"
         }
       ]
+    },
+    {
+      "id": "b6e4",
+      "companyName": "test",
+      "phone": "0644832235",
+      "email": "dlimi@gmail.com",
+      "password": "12344",
+      "role": "Company",
+      "LoggedIn": false,
+      "offers": []
     }
   ],
   "postulations": [

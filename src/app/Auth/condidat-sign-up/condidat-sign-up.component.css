@@ -72,9 +72,11 @@ body {
   }
   
   .sign {
+    margin-top: 40px;
     display: block;
     width: 100%;
     background-color: rgba(167, 139, 250, 1);
+ 
     padding: 0.75rem;
     text-align: center;
     color: rgba(17, 24, 39, 1);
@@ -82,46 +84,7 @@ body {
     border-radius: 0.375rem;
     font-weight: 600;
   }
-  
-  .social-message {
-    display: flex;
-    align-items: center;
-    padding-top: 1rem;
-  }
-  
-  .line {
-    height: 1px;
-    flex: 1 1 0%;
-    background-color: rgba(55, 65, 81, 1);
-  }
-  
-  .social-message .message {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    color: rgba(156, 163, 175, 1);
-  }
-  
-  .social-icons {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .social-icons .icon {
-    border-radius: 0.125rem;
-    padding: 0.75rem;
-    border: none;
-    background-color: transparent;
-    margin-left: 8px;
-  }
-  
-  .social-icons .icon svg {
-    height: 1.25rem;
-    width: 1.25rem;
-    fill: #fff;
-  }
-  
+    
   .signup {
     text-align: center;
     font-size: 0.75rem;
@@ -129,3 +92,11 @@ body {
     color: rgba(156, 163, 175, 1);
   }
   
+  button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    }
+li {
+  color: rgb(255, 179, 0);
+  margin-top: 10px;
+}

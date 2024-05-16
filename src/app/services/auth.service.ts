@@ -18,9 +18,15 @@ export class AuthService {
   signUpCandidate(credentials : Candidate) : Observable<Candidate> {
     return this.http.post<Candidate>("http://localhost:3000/candidates",credentials)
   }
+  getCandidates() : Observable<Candidate[]> {
+    return this.http.get<Candidate[]>("http://localhost:3000/candidates")
+  }
+  getCompanies() : Observable<Company[]> {
+    return this.http.get<Company[]>("http://localhost:3000/companies")
+  }
   saveToLocalStorage(user : Account){
-    localStorage.setItem('email', user.email)
-    localStorage.setItem('role', user.role)
+    localStorage.setItem('email', user.email as string)
+    localStorage.setItem('role', user.role as string)
     localStorage.setItem('LoggedIn', String(user.LoggedIn))
     
   }
