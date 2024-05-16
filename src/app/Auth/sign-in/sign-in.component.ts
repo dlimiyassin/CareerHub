@@ -23,12 +23,5 @@ export class SignInComponent {
     
   }
 
-  getAccounts(){
-    this.authService.getAccounts().subscribe({
-      next: (accounts) => { 
-        this.accounts = accounts
-        console.log(this.accounts);
-      }
-    })
-  }
+
 }
