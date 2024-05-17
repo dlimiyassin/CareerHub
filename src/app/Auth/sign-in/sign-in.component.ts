@@ -36,7 +36,6 @@ export class SignInComponent {
           console.log(this.user);
           showErrorMessage = true
           this.handleUser(this.user)
-
           this.route.navigateByUrl("/candidate")
         }
       },
