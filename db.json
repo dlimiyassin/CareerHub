@@ -53,20 +53,13 @@
   "companies": [
     {
       "id": "1",
-      "email": "company@gmail.com",
-      "password": "1234",
-      "role": "COMPANY",
+      "companyName": "test",
+      "phone": "0644832235",
+      "email": "dlimi@gmail.com",
+      "password": "12344",
+      "role": "Company",
       "LoggedIn": false,
-      "companyName": "yassine",
-      "phone": "0623456789",
-      "offers": [
-        {
-          "title": "devlopper",
-          "description": "java",
-          "salary": "8000",
-          "place": "Casablaca"
-        }
-      ]
+      "offers": []
     },
     {
       "id": "b6e4",
@@ -76,15 +69,32 @@
       "password": "12344",
       "role": "Company",
       "LoggedIn": false,
-      "offers": [],
-      "postulations": [
+      "offers": [
         {
-          "id": "1",
-          "offer": "offer",
-          "Candidate": "1234",
-          "date": "2023"
+          "id": "mDFm",
+          "title": "eeeeeeeeeee",
+          "place": "eeeeeeeeeeeee",
+          "salary": "444444444444",
+          "description": "eeeeeeeeeeeeee"
+        },
+        {
+          "title": "jjjjjjjjj",
+          "place": "hhhhhhhhhhhhhh",
+          "salary": "666666666666",
+          "description": "hhhhhhhhhhh",
+          "id": "ZdpL"
         }
       ]
     }
+  ],
+
+  "postulations": [
+    {
+      "id": "1",
+      "offer": "offer",
+      "Candidate": "1234",
+      "date": "2023"
+    }
   ]
 }
+

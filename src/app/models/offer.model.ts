@@ -1,5 +1,5 @@
 export interface Offer{
-  id? : number 
+  id? : string 
   title : string
   description : string
   salary : number

@@ -1,7 +1,7 @@
 import { Account } from "./account.model";
 
 export interface Candidate extends Account{
-  id? : number
+  id? : string
   firstName : string
   lastName : string
   phone : string
