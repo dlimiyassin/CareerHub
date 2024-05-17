@@ -2,23 +2,23 @@
   "candidates": [
     {
       "id": "1",
-      "email": "dlimiyassine13@gmail.com",
+      "email": "mouradadezz@gmail.com",
       "password": "teeest",
       "role": "teeest",
       "LoggedIn": false,
       "firstName": "",
       "lastName": "",
       "phone": "",
-      "cv": "C:\\fakepath\\bac.pdf",
+      "cv": "C:\\fakepath\\u1.jpg",
       "skils": [
-        "lhjoö"
+        "JAVA",
+        "HTML"
       ]
     },
     {
       "id": "a8a4",
       "firstName": "yassine",
       "lastName": "dlimi",
-<<<<<<< HEAD
       "phone": "0623456789",
       "cv": "cv",
       "skills": [
@@ -30,11 +30,6 @@
       "id": "d35e",
       "firstName": "Mourad",
       "lastName": "KADRAOUI",
-      "phone": "0697670749",
-      "email": "mouradadezz@gmail.com",
-      "password": "1234",
-      "role": "CONDIDAT",
-=======
       "phone": "0644832235",
       "email": "dlimiyassine13@gmail.com",
       "password": "fghjsk",
@@ -100,7 +95,18 @@
       "password": null,
       "role": "CONDIDAT",
       "LoggedIn": true,
->>>>>>> a04283a323bb28f4b6e890027a585f6af7e2ef42
+      "cv": "",
+      "skils": []
+    },
+    {
+      "id": "f544",
+      "firstName": "Mourad",
+      "lastName": "KADRAOUI",
+      "phone": "69767079",
+      "email": "mouradadezz@gmail.com",
+      "password": "121123413",
+      "role": "CONDIDAT",
+      "LoggedIn": true,
       "cv": "",
       "skils": []
     }
@@ -122,6 +128,16 @@
           "place": "Casablaca"
         }
       ]
+    },
+    {
+      "id": "a739",
+      "companyName": "JobInTech",
+      "phone": "0697670749",
+      "email": "mouradadezz@gmail.com",
+      "password": "1212324",
+      "role": "Company",
+      "LoggedIn": true,
+      "offers": []
     }
   ],
   "postulations": [
