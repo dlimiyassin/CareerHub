@@ -5,27 +5,68 @@
             <div class="input-group">
                 <label for="firstName">FirstName</label>
                 <input type="text" firstName="firstName" id="firstName" formControlName="firstName">
+                @if (condidatForm.get('firstName')?.touched && condidatForm.get('firstName')?.invalid || condidatForm.get('firstName')?.dirty) {
+				
+					<ul>
+						<li *ngIf="condidatForm.get('firstName')?.getError('minlength')">min length : 4</li>
+						<li *ngIf="condidatForm.get('firstName')?.getError('required')">firstName is required</li>
+					</ul>
+				
+			    }
             </div>
             <div class="input-group">
                 <label for="lastName">LastName</label>
                 <input type="text" lastName="lastName" id="lastName" formControlName="lastName">
+                @if (condidatForm.get('lastName')?.touched && condidatForm.get('lastName')?.invalid || condidatForm.get('lastName')?.dirty) {
+				
+					<ul>
+						<li *ngIf="condidatForm.get('lastName')?.getError('minlength')">min length : 4</li>
+						<li *ngIf="condidatForm.get('lastName')?.getError('required')">lastName is required</li>
+					</ul>
+				
+			    }
             </div>
             <div class="input-group">
                 <label for="phone">Phone</label>
                 <input type="text" phone="phone" id="phone" formControlName="phone">
+                @if (condidatForm.get('phone')?.touched && condidatForm.get('phone')?.invalid || condidatForm.get('phone')?.dirty) {
+				
+					<ul>
+						<li *ngIf="condidatForm.get('phone')?.getError('minlength')">min length : 10</li>
+						<li *ngIf="condidatForm.get('phone')?.getError('required')">phone is required</li>
+					</ul>
+				
+			    }
             </div>
             <div class="input-group">
                 <label for="email">Email</label>
                 <input type="email" name="email" id="email" formControlName="email">
+                @if (condidatForm.get('email')?.touched && condidatForm.get('email')?.invalid || condidatForm.get('email')?.dirty) {
+				
+					<ul>
+						<li *ngIf="condidatForm.get('email')?.getError('email')">invalid email</li>
+						<li *ngIf="condidatForm.get('email')?.getError('required')">email is required</li>
+						<li *ngIf="condidatForm.get('email')?.getError('emailValidate')">email already exist</li>
+
+					</ul>
+				
+			    }
             </div>
             <div class="input-group">
                 <label for="password">Password</label>
                 <input type="password" name="password" id="password" formControlName="password">
-                <div class="forgot">
-                    <a rel="noopener noreferrer" href="#">Forgot Password ?</a>
-                </div>
+                @if (condidatForm.get('password')?.touched && condidatForm.get('password')?.invalid || condidatForm.get('password')?.dirty) {
+				
+					<ul>
+						<li *ngIf="condidatForm.get('password')?.getError('minlength')">min length : 4</li>
+						<li *ngIf="condidatForm.get('password')?.getError('maxlength')">max length : 12</li>
+						<li *ngIf="condidatForm.get('password')?.getError('required')">password is required</li>
+					</ul>
+				
+			    }
+
             </div>
-            <button type="submit" class="sign">Sign Up</button>
+            <button type="submit" class="sign" [disabled]="condidatForm.invalid">Sign Up</button>
         </form>
     </div>
         

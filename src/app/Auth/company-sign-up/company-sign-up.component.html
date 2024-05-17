@@ -5,23 +5,53 @@
             <div class="input-group">
                 <label for="companyName">Company Name</label>
                 <input type="text" name="companyName" id="companyName" formControlName="companyName">
+                @if (companyForm.get('companyName')?.touched && companyForm.get('companyName')?.invalid || companyForm.get('companyName')?.dirty) {
+				
+					<ul>
+						<li *ngIf="companyForm.get('companyName')?.getError('minlength')">min length : 4</li>
+						<li *ngIf="companyForm.get('companyName')?.getError('required')">name is required</li>
+					</ul>
+				
+			    }
             </div>
             <div class="input-group">
                 <label for="phone">Phone</label>
                 <input type="text" name="phone" id="phone" formControlName="phone">
+                @if (companyForm.get('phone')?.touched && companyForm.get('phone')?.invalid || companyForm.get('phone')?.dirty) {
+				
+					<ul>
+						<li *ngIf="companyForm.get('phone')?.getError('minlength')">min length : 10</li>
+						<li *ngIf="companyForm.get('phone')?.getError('required')">phone is required</li>
+					</ul>
+				
+			    }
             </div>
             <div class="input-group">
                 <label for="email">Email</label>
                 <input type="email" name="email" id="email" formControlName="email">
+                @if (companyForm.get('email')?.touched && companyForm.get('email')?.invalid || companyForm.get('email')?.dirty) {
+				
+					<ul>
+						<li *ngIf="companyForm.get('email')?.getError('email')">invalid email</li>
+						<li *ngIf="companyForm.get('email')?.getError('required')">email is required</li>
+						<li *ngIf="companyForm.get('email')?.getError('emailValidate')">email already exist</li>
+					</ul>
+			    }
             </div>
             <div class="input-group">
                 <label for="password">Password</label>
                 <input type="password" name="password" id="password" formControlName="password">
-                <div class="forgot">
-                    <a rel="noopener noreferrer" href="#">Forgot Password ?</a>
-                </div>
+                @if (companyForm.get('password')?.touched && companyForm.get('password')?.invalid || companyForm.get('password')?.dirty) {
+				
+					<ul>
+						<li *ngIf="companyForm.get('password')?.getError('minlength')">min length : 4</li>
+						<li *ngIf="companyForm.get('password')?.getError('maxlength')">max length : 12</li>
+						<li *ngIf="companyForm.get('password')?.getError('required')">password is required</li>
+					</ul>
+				
+			    }
             </div>
-            <button type="submit" class="sign">Sign Up</button>
+            <button type="submit" class="sign" [disabled]="companyForm.invalid">Sign Up</button>
         </form>
     </div>
         

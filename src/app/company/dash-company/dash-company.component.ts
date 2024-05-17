@@ -9,34 +9,15 @@ import { AuthService } from '../../services/auth.service';
   templateUrl: './dash-company.component.html',
   styleUrl: './dash-company.component.css'
 })
-export class DashCompanyComponent implements OnInit  {
+export class DashCompanyComponent {
 
-  candidates : Candidate[]=[]
-  i : number = 0
+
   constructor(private service : CandidateService, private route : Router, private authService : AuthService){
 
   }
-
-  ngOnInit(): void {
-     this.getCandidates()
-  }
-
-
-  getCandidates(){
-    this.service.getCandidates().subscribe((data)=>{
-      this.candidates = data
-    })
-  }
-
-
-
-  delete(id : number){
-    this.service.deleteCandidate(id)
-  }
-
   
-signOut(){
-  this.authService.clearLocalStorage()
-  this.route.navigateByUrl("/sign-in")
-}
+  signOut(){
+    this.authService.clearLocalStorage()
+    this.route.navigateByUrl("/sign-in")
+  }
 }
