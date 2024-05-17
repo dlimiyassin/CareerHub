@@ -74,7 +74,7 @@ export class SignInComponent {
       id : userr?.id,
       email : userr?.email ,
       role  : userr?.role,
-      LoggedIn : userr?.LoggedIn
+      LoggedIn : true
     }
     this.authService.saveToLocalStorage(user)
   }

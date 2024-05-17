@@ -74,7 +74,7 @@ export class OfferCompanyComponent implements OnInit{
       description: this.form.get('description')?.value
     }
     this.company.offers.push(off)
-    this.offerService.addOffer(this.company,this.company.id as string).subscribe({
+    this.offerService.addOffer(this.company).subscribe({
       next : (company) => {
         this.offers = company.offers
         this.form.reset()
@@ -90,19 +90,40 @@ export class OfferCompanyComponent implements OnInit{
 
   // ****** update *******
 
-  update(){
-
+  updateOfeerId : string | undefined
+  updateOffer(){
+    const off : Offer = {
+      title : this.edit.get('title')?.value ,
+      place : this.edit.get('place')?.value,
+      salary : this.edit.get('salary')?.value ,
+      description: this.edit.get('description')?.value
+    }
+    this.company.offers = this.company.offers.map(offer => offer.id == this.updateOfeerId ? {...off, id : this.updateOfeerId} : offer)
+    this.offerService.addOffer(this.company).subscribe(company => {
+      this.offers = company.offers
+      this.edit.reset()
+      this.modal?.hide()
+    })
   }
 
-  openUpdate(templateEdit : any,id?:string){
+
+  openUpdate(templateEdit : any,id? :string){
     this.modal = this.modalService.show(templateEdit)
-    this.offerService.getOfferById(id)
+    this.updateOfeerId = id;
+    
+    const o : Offer | undefined = this.company.offers.find(offer => offer.id == id)     
+    this.edit.setValue({
+      title : o?.title,
+      place : o?.place,
+      salary : o?.salary,
+      description : o?.description
+    })
   }
 
   // ****** delete *******
   delete(id? : string){
-    this.company.offers.filter(offer => { offer.id != id })
-    this.offerService.deleteOffer(this.company,id).subscribe({
+    this.company.offers=this.company.offers.filter(offer => offer.id !== id )   
+    this.offerService.deleteOffer(this.company).subscribe({
       next :company => { this.offers = company.offers },
       error:err     => { console.log(err); }
     })

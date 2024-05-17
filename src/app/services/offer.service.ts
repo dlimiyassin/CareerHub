@@ -18,13 +18,13 @@ export class OfferService {
 
   constructor(private http : HttpClient) { }
 
-  addOffer(company : Company, userID : string) : Observable<Company>{
-    const url = `http://localhost:3000/companies/${userID}`
+  addOffer(company : Company) : Observable<Company>{
+    const url = `http://localhost:3000/companies/${company.id}`
   return  this.http.put<Company>(url,company)
   }
 
-  deleteOffer(company : Company,id? : string) : Observable<Company>{
-    const url = `http://localhost:3000/companies/${id}`
+  deleteOffer(company : Company) : Observable<Company>{
+    const url = `http://localhost:3000/companies/${company.id}`
       return this.http.put<Company>(url,company)
   }
 
