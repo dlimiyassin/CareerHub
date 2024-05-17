@@ -13,7 +13,6 @@ import { DashCondidatComponent } from './condidat/dash-condidat/dash-condidat.co
 import { DashCompanyComponent } from './company/dash-company/dash-company.component';
 import { OfferCompanyComponent } from './company/offer-company/offer-company.component';
 import { CandidateCompanyComponent } from './company/candidate-company/candidate-company.component';
-import { OfferCandidateComponent } from './condidat/offer-candidate/offer-candidate.component';
 import { CandidatePostulerCompanyComponent } from './company/candidate-postuler-company/candidate-postuler-company.component';
 import { CompleteProfileComponent } from './condidat/complete-profile/complete-profile.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
@@ -31,7 +30,6 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     DashCompanyComponent,
     OfferCompanyComponent,
     CandidateCompanyComponent,
-    OfferCandidateComponent,
     CandidatePostulerCompanyComponent,
     CompleteProfileComponent
   ],

@@ -70,7 +70,8 @@ export class SignInComponent {
 
 
   handleUser(userr : Candidate | Company | undefined){
-    const user : Account = {
+    const user = {
+      id : userr?.id,
       email : userr?.email ,
       role  : userr?.role,
       LoggedIn : userr?.LoggedIn

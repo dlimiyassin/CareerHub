@@ -6,18 +6,14 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class CompanyService implements OnInit{
-  company! : Company
+export class CompanyService {
 
-  private api = 'http://localhost:3000/company';
+  private api = 'http://localhost:3000/companies';
   constructor(private http : HttpClient) { }
 
 
-  ngOnInit(): void {
 
-  }
-
-  getCompanyById(id : number) : Observable<Company>{
+  getCompanyById(id : string) : Observable<Company>{
   return this.http.get<Company>(`${this.api}/${id}`)
   }
 }

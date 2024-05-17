@@ -15,11 +15,9 @@
       ]
     },
     {
-
       "id": "a8a4",
       "firstName": "yassine",
       "lastName": "dlimi",
-
       "phone": "0623456789",
       "cv": "cv",
       "skills": [
@@ -28,109 +26,12 @@
       ]
     },
     {
-      "id": "d35e",
-      "firstName": "Mourad",
-      "lastName": "KADRAOUI",
-      "phone": "0644832235",
-      "email": "dlimiyassine13@gmail.com",
-      "password": "fghjsk",
-      "role": "CONDIDAT",
-      "LoggedIn": true,
-      "cv": "",
-      "skils": []
-    },
-    {
-      "id": "a3b2",
+      "id": "550d",
       "firstName": "yassine",
       "lastName": "dlimi",
       "phone": "0644832235",
-      "email": "dlimiyassine13@gmail.com",
-      "password": null,
-      "role": "CONDIDAT",
-      "LoggedIn": true,
-      "cv": "",
-      "skils": []
-    },
-    {
-      "id": "0456",
-      "firstName": "yassine",
-      "lastName": "dlimi",
-      "phone": "0644832235",
-      "email": "dlimiyassine13@gmail.com",
-      "password": null,
-      "role": "CONDIDAT",
-      "LoggedIn": true,
-      "cv": "",
-      "skils": []
-    },
-    {
-      "id": "2552",
-      "firstName": "Yassine",
-      "lastName": "Dlimi",
-      "phone": "0644832235",
-      "email": "dlimiyassine08@gmail.com",
-      "password": "1234",
-      "role": "CONDIDAT",
-      "LoggedIn": true,
-      "cv": "",
-      "skils": []
-    },
-    {
-      "id": "3905",
-      "firstName": "Yassine",
-      "lastName": "Dlimi",
-      "phone": "0644832235",
-      "email": "itsmyspace0029@gmail.com",
-      "password": "123456",
-      "role": "CONDIDAT",
-      "LoggedIn": false,
-      "cv": "",
-      "skils": []
-    },
-    {
-      "id": "cc43",
-      "firstName": null,
-      "lastName": null,
-      "phone": null,
-      "email": null,
-      "password": null,
-      "role": "CONDIDAT",
-
-      "LoggedIn": false,
-      "cv": "",
-      "skils": []
-    },
-    {
-      "id": "1b60",
-      "firstName": null,
-      "lastName": null,
-      "phone": null,
-      "email": null,
-      "password": null,
-      "role": "CONDIDAT",
-      "LoggedIn": false,
-      "cv": "",
-      "skils": []
-    },
-    {
-      "id": "5cd1",
-      "firstName": null,
-      "lastName": null,
-      "phone": null,
-      "email": null,
-      "password": null,
-      "role": "CONDIDAT",
-      "LoggedIn": false,
-      "cv": "",
-      "skils": []
-    },
-    {
-      "id": "9b09",
-      "firstName": null,
-      "lastName": null,
-      "phone": null,
-      "email": null,
-      "password": null,
+      "email": "dlimiyassine1@gmail.com",
+      "password": "1234567",
       "role": "CONDIDAT",
       "LoggedIn": false,
       "cv": "",
@@ -163,7 +64,20 @@
       "password": "12344",
       "role": "Company",
       "LoggedIn": false,
-      "offers": []
+      "offers": [
+        {
+          "title": "devlopper",
+          "description": "java",
+          "salary": "8000",
+          "place": "Casablaca"
+        },
+        {
+          "title": "tttttttt",
+          "place": "tttttttttttt",
+          "salary": "666666666666666",
+          "description": "ytttttttttttttttttt"
+        }
+      ]
     }
   ],
   "postulations": [
@@ -172,15 +86,6 @@
       "offer": "offer",
       "Candidate": "1234",
       "date": "2023"
-    }
-  ],
-  "offers": [
-    {
-      "id": "8f11",
-      "title": "Java",
-      "place": "rabat",
-      "salary": "2000",
-      "description": "dsmfùlfmlgdfg"
     }
   ]
 }
