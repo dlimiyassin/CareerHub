@@ -37,7 +37,7 @@ isEmailValidate(control: AbstractControl){
   let isExist : boolean = this.eamilCheck(control.value)
   if(!isExist){
     return null
-  } 
+  }
   return { emailValidate : true }
 }
 
@@ -49,7 +49,7 @@ eamilCheck(email : string) : boolean{
     return false
   }
   }
-  
+
   isExist(users : Candidate[] | Company[], email :string) : boolean {
     const isExist = false
     for(const user of users){
@@ -70,7 +70,7 @@ eamilCheck(email : string) : boolean{
     })
     this.authService.getCompanies().subscribe({
       next : (users) => {
-      this.companies = users        
+      this.companies = users
       },
       error: (err) => {}
     })
@@ -83,7 +83,7 @@ signUp(){
       phone     : this.condidatForm.get('phone')?.value,
       email     : this.condidatForm.get('email')?.value,
       password  : this.condidatForm.get('password')?.value,
-      role      : "CONDIDAT",
+      role      : "CANDIDATE",
       LoggedIn  : false,
       cv        : '',
       skils     : []
@@ -95,6 +95,6 @@ signUp(){
       },
       error: (err) => {console.log(err);
       }
-    })  
+    })
   }
 }

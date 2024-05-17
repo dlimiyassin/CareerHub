@@ -36,6 +36,18 @@
       "LoggedIn": false,
       "cv": "",
       "skils": []
+    },
+    {
+      "id": "066f",
+      "firstName": "Mourad",
+      "lastName": "KADRAOUI",
+      "phone": "0697670749",
+      "email": "mouradadezz@gmail.com",
+      "password": "1234",
+      "role": "CANDIDATE",
+      "LoggedIn": false,
+      "cv": "",
+      "skils": []
     }
   ],
   "companies": [
@@ -64,15 +76,15 @@
       "password": "12344",
       "role": "Company",
       "LoggedIn": false,
-      "offers": [ ],
-  "postulations": [
-    {
-      "id": "1",
-      "offer": "offer",
-      "Candidate": "1234",
-      "date": "2023"
+      "offers": [],
+      "postulations": [
+        {
+          "id": "1",
+          "offer": "offer",
+          "Candidate": "1234",
+          "date": "2023"
+        }
+      ]
     }
   ]
-    }
-]
 }

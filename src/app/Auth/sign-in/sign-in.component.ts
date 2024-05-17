@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
 })
 export class SignInComponent {
 
+
   constructor(private builedr : FormBuilder,private authService : AuthService, private route : Router){}
 
   Loginform : FormGroup = this.builedr.group({
@@ -35,6 +36,7 @@ export class SignInComponent {
           console.log(this.user);
           showErrorMessage = true
           this.handleUser(this.user)
+
           this.route.navigateByUrl("/candidate")
         }
       },
@@ -55,7 +57,7 @@ export class SignInComponent {
     })
     if(!showErrorMessage) console.log("the email or password is incorrect");
   }
-  
+
 
   isExist(users : Candidate[] | Company[], email :string, password : string) : boolean {
     const isExist = false
@@ -73,7 +75,7 @@ export class SignInComponent {
     const user : Account = {
       email : userr?.email ,
       role  : userr?.role,
-      LoggedIn : userr?.LoggedIn
+      LoggedIn : true
     }
     this.authService.saveToLocalStorage(user)
   }
