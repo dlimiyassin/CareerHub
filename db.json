@@ -119,15 +119,23 @@
       "offers": [
         {
           "title": "Neque ",
-          "place": "Consequuntur amet n",
+          "place": "Consequuntur",
           "salary": "200",
+          "skills": [
+            "Agile",
+            "COMUNICATION"
+          ],
           "description": "Eligendi ullam assum",
           "id": "Lnzp"
         },
         {
           "id": "2ZiM",
           "title": "Esse mollit accusam",
-          "place": "Autem molestiae eu a",
+          "place": "Autem",
+          "skills": [
+            "Agile",
+            "COMUNICATION"
+          ],
           "salary": "2000",
           "description": "Voluptates esse nos"
         }

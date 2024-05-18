@@ -33,15 +33,15 @@ export class OfferCompanyComponent implements OnInit{
 
   form : FormGroup = this.formBuilder.group({
     title : [null,[Validators.minLength(3),Validators.maxLength(20)]],
-    place : [null,Validators.minLength(5)],
+    place : [null,[Validators.minLength(3),Validators.maxLength(20)]],
     salary: [null],
-    description : [null,Validators.minLength(10)]
+    description : [null,[Validators.minLength(3),Validators.maxLength(20)]]
   })
   edit : FormGroup = this.formBuilder.group({
-    title : [null,Validators.minLength(3)],
-    place : [null,Validators.minLength(5)],
+    title : [null,[Validators.minLength(3),Validators.maxLength(20)]],
+    place : [null,[Validators.minLength(3),Validators.maxLength(20)]],
     salary: [null],
-    description : [null,Validators.minLength(10)]
+    description : [null,[Validators.minLength(3),Validators.maxLength(20)]]
   })
 
   modal? : BsModalRef
