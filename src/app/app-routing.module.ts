@@ -16,12 +16,16 @@ import { ProfileComponent } from './condidat/profile/profile.component';
 import { PostsComponent } from './condidat/posts/posts.component';
 import { OffersComponent } from './condidat/offers/offers.component';
 
+import { NoAuthGuardService } from './guards/auth-no-guard.service';
+import { AuthCompanyGuardService } from './guards/auth-company-guard.service';
+import { AuthCandidateGuardService } from './guards/auth-candidate-guard.service';
+
 const routes: Routes = [
   {path:'', component:HomeComponent, title: 'Home'},
   {path:'company-sign-up', component:CompanySignUpComponent, title: 'Sign Up'},
   {path:'condidat-sign-up', component:CondidatSignUpComponent, title: 'Sign Up'},
   {path:'choose-sign', component:ChooseSignMethodComponent, title: 'Sign Up'},
-  {path:'sign-in', component:SignInComponent, title: 'Sign Up'},
+  {path:'sign-in', component:SignInComponent, title: 'Sign Up',canActivate :[NoAuthGuardService]},
 
 
   {path:'candidate',
@@ -31,8 +35,9 @@ const routes: Routes = [
     {path:'offers', component:OffersComponent, title:'Profile'},
     {path:'profile', component:ProfileComponent, title:'Profile'},
     {path:'posts', component:PostsComponent, title:'Posts'}
+  ],canActivate : [AuthCandidateGuardService]
+},
 
-  ]},
 
   {path:'company',
   children : [
@@ -40,7 +45,7 @@ const routes: Routes = [
    {path:'offer', component : OfferCompanyComponent, title : 'Offer'},
    {path : 'candidate', component : CandidateCompanyComponent , title :'candidate'},
    {path : 'candidate-post/:id', component : CandidatePostulerCompanyComponent}
- ]},
+ ], canActivate : [AuthCompanyGuardService]},
 
 ];
 

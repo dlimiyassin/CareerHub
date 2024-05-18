@@ -33,7 +33,7 @@ isEmailValidate(control: AbstractControl){
   let isExist : boolean = this.eamilCheck(control.value)
   if(!isExist){
     return null
-  } 
+  }
   return { emailValidate : true }
 }
 
@@ -45,7 +45,7 @@ eamilCheck(email : string) : boolean{
     return false
   }
   }
-  
+
   isExist(users : Candidate[] | Company[], email :string) : boolean {
     const isExist = false
     for(const user of users){
@@ -66,7 +66,7 @@ eamilCheck(email : string) : boolean{
     })
     this.authService.getCompanies().subscribe({
       next : (users) => {
-      this.companies = users        
+      this.companies = users
       },
       error: (err) => {}
     })
@@ -78,7 +78,7 @@ companyName : this.companyForm.get('companyName')?.value,
 phone     : this.companyForm.get('phone')?.value,
 email     : this.companyForm.get('email')?.value,
 password  : this.companyForm.get('password')?.value,
-role      : "Company",
+role      : "COMPANY",
 LoggedIn  : false,
 offers    : []
 }
@@ -89,7 +89,7 @@ this.companyForm.reset()
 },
 error: (err) => {console.log(err);
 }
-})  
+})
 }
 
 }

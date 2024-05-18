@@ -29,10 +29,10 @@ export class AuthService {
     localStorage.setItem('email', user.email)
     localStorage.setItem('role', user.role)
     localStorage.setItem('LoggedIn', String(user.LoggedIn))
-    
+
   }
   getEmail(){
-    return localStorage.getItem('email')    
+    return localStorage.getItem('email')
   }
 
   getUserID(){
@@ -41,5 +41,16 @@ export class AuthService {
   
   clearLocalStorage(){
     localStorage.clear()
+  }
+
+  isAuthenticated() : boolean{
+  const auth = localStorage.getItem('LoggedIn');
+  if(auth) return true
+  else return false
+  }
+
+  getRole(){
+    const role = localStorage.getItem('role')
+    return role
   }
 }

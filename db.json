@@ -97,6 +97,48 @@
           "description": "Describing Epics"
         }
       ]
+    },
+    {
+      "id": "3a82",
+      "companyName": "JobInTech",
+      "phone": "0697670749",
+      "email": "abdessamad@gmail.com",
+      "password": "1234",
+      "role": "COMPANY",
+      "LoggedIn": false,
+      "offers": []
+    },
+    {
+      "id": "5592",
+      "companyName": "JobInTech",
+      "phone": "0697670749",
+      "email": "salah@gmail.com",
+      "password": "1234",
+      "role": "COMPANY",
+      "LoggedIn": false,
+      "offers": [
+        {
+          "title": "Neque ",
+          "place": "Consequuntur amet n",
+          "salary": "200",
+          "description": "Eligendi ullam assum",
+          "id": "Lnzp"
+        },
+        {
+          "id": "2ZiM",
+          "title": "Esse mollit accusam",
+          "place": "Autem molestiae eu a",
+          "salary": "2000",
+          "description": "Voluptates esse nos"
+        },
+        {
+          "id": "otp5",
+          "title": "Temporibus repudiand",
+          "place": "Aliquip magni dolore",
+          "salary": "2000",
+          "description": "Saepe quisquam sed e"
+        }
+      ]
     }
   ],
   "postulations": [
