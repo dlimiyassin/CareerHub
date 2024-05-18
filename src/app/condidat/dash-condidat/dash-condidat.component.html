@@ -1,39 +1,10 @@
 
-   <nav class="nav nav-pills justify-content-between">
-      <p class="title">Career Hub</p>
-      <button routerLink="/candidate" class="btn ms-5">Offers</button>
-      <button routerLink="/candidate/posts" class="btn ms-0">Postulations</button>
-      <button routerLink="/candidate/profile" class="btn ms-0">Profile</button>
-      <button (click)="signOut()" class="btn mx-3">Sign Out</button>  
-    </nav>
-  <h2 class="ms-5 mt-4 fw-bold">Find Your Mission Easly</h2>
-  <hr class="ms-5 w-25">
-  <main>
-    <div class="container-fluid mt-5 d-flex justify-content-around">
-      <div class="row row-cols-4 mx-5">
-        @for (offer of offers; track $index) {
-          <div class="col my-4">
-            <div class="card stretched-link">
-              <p class="heading">{{offer.title}}</p>
-              <ul class="overflow-hide" style="max-height: 100px; overflow: hidden;">
-                @for (skill of offer.skills; track $index) {
-                  <li>{{skill}}</li>
-                }                
-              </ul>
-              <hr class="my-0">
-              <div class="d-flex justify-content-between h-25">
-                <div class="d-grid">
-                  <p><i class="bi bi-geo-alt"></i>  {{offer.place}}</p>
-                  <p><i class="bi bi-currency-dollar"></i>  {{offer.salary}}</p>
-                </div>
-                <button class="me-0" routerLink="/" >Apply</button>
-              </div>
-            </div>
-          </div>
-        }
-      </div>
+<nav class="nav nav-pills justify-content-between">
+  <p class="title">Career Hub</p>
+  <button routerLink="/candidate/offers" class="btn ms-5">Offers</button>
+  <button routerLink="/candidate/posts" class="btn ms-0">Postulations</button>
+  <button routerLink="/candidate/profile" class="btn ms-0">Profile</button>
+  <button (click)="signOut()" class="btn mx-3">Sign Out</button>  
+</nav>
 
-
-    </div>
-  </main>  
- 
+  <router-outlet />

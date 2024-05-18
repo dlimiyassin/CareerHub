@@ -19,6 +19,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { ProfileComponent } from './condidat/profile/profile.component';
 import { PostsComponent } from './condidat/posts/posts.component';
 import { OffersComponent } from './condidat/offers/offers.component';
+import { NavComponent } from './Auth/nav/nav.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { OffersComponent } from './condidat/offers/offers.component';
     CompleteProfileComponent,
     ProfileComponent,
     PostsComponent,
-    OffersComponent
+    OffersComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,

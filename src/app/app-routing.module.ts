@@ -28,9 +28,10 @@ const routes: Routes = [
   {path:'sign-in', component:SignInComponent, title: 'Sign Up',canActivate :[NoAuthGuardService]},
 
 
-  {path:'candidate',
+  {
+  path:'candidate',
+  component : DashCondidatComponent,
    children : [
-    {path:'', component:DashCondidatComponent, title:'Dashboard'},
     {path:'cv', component:CompleteProfileComponent, title:'Profile'},
     {path:'offers', component:OffersComponent, title:'Offers'},
     {path:'profile', component:ProfileComponent, title:'Profile'},
@@ -39,9 +40,10 @@ const routes: Routes = [
 },
 
 
-  {path:'company',
+  {
+  path:'company',
+  component:DashCompanyComponent,
   children : [
-   {path:'', component:DashCompanyComponent, title:'Dashboard'},
    {path:'offer', component : OfferCompanyComponent, title : 'Offer'},
    {path : 'candidate', component : CandidateCompanyComponent , title :'candidate'},
    {path : 'candidate-post/:id', component : CandidatePostulerCompanyComponent}
