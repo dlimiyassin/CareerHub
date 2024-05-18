@@ -1,9 +1,24 @@
 
 <nav class="nav nav-pills justify-content-between">
   <p class="title">Career Hub</p>
-  <button routerLink="/candidate/offers" class="btn ms-5">Offers</button>
-  <button routerLink="/candidate/posts" class="btn ms-0">Postulations</button>
-  <button routerLink="/candidate/profile" class="btn ms-0">Profile</button>
+  <button 
+          routerLink="/candidate/offers" 
+          routerLinkActive="activebutton"
+          ariaCurrentWhenActive="page">
+    Offers
+  </button>
+  <button 
+          routerLink="/candidate/posts" 
+          routerLinkActive="activebutton"
+          ariaCurrentWhenActive="page">
+    Posts
+  </button>
+  <button 
+  routerLink="/candidate/profile" 
+  routerLinkActive="activebutton"
+  ariaCurrentWhenActive="page">
+    Profile
+</button>
   <button (click)="signOut()" class="btn mx-3">Sign Out</button>  
 </nav>
 
