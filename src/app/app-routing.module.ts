@@ -12,6 +12,9 @@ import { CompleteProfileComponent } from './condidat/complete-profile/complete-p
 import { OfferCompanyComponent } from './company/offer-company/offer-company.component';
 import { CandidateCompanyComponent } from './company/candidate-company/candidate-company.component';
 import { CandidatePostulerCompanyComponent } from './company/candidate-postuler-company/candidate-postuler-company.component';
+import { ProfileComponent } from './condidat/profile/profile.component';
+import { PostsComponent } from './condidat/posts/posts.component';
+import { OffersComponent } from './condidat/offers/offers.component';
 
 const routes: Routes = [
   {path:'', component:HomeComponent, title: 'Home'},
@@ -24,7 +27,10 @@ const routes: Routes = [
   {path:'candidate',
    children : [
     {path:'', component:DashCondidatComponent, title:'Dashboard'},
-    {path:'cv', component:CompleteProfileComponent, title:'Profile'}
+    {path:'cv', component:CompleteProfileComponent, title:'Profile'},
+    {path:'offers', component:OffersComponent, title:'Profile'},
+    {path:'profile', component:ProfileComponent, title:'Profile'},
+    {path:'posts', component:PostsComponent, title:'Posts'}
 
   ]},
 

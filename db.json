@@ -2,80 +2,103 @@
   "candidates": [
     {
       "id": "1",
-      "email": "dlimiyassine13@gmail.com",
+      "email": "candidate@gmail.com",
       "password": "12345",
-      "role": "teeest",
+      "role": "CANDIDATE",
       "LoggedIn": false,
-      "firstName": "",
-      "lastName": "",
-      "phone": "",
+      "firstName": "firtsN",
+      "lastName": "lastN",
+      "phone": "0676543234",
       "cv": "C:\\fakepath\\bac.pdf",
       "skils": [
-        "lhjoö"
+        "java"
       ]
-    },
-    {
-      "id": "a8a4",
-      "firstName": "yassine",
-      "lastName": "dlimi",
-      "phone": "0623456789",
-      "cv": "cv",
-      "skills": [
-        "java",
-        "angular"
-      ]
-    },
-    {
-      "id": "550d",
-      "firstName": "yassine",
-      "lastName": "dlimi",
-      "phone": "0644832235",
-      "email": "dlimiyassine1@gmail.com",
-      "password": "1234567",
-      "role": "CONDIDAT",
-      "LoggedIn": false,
-      "cv": "",
-      "skils": []
     }
   ],
   "companies": [
     {
       "id": "1",
-      "companyName": "test",
+      "companyName": "company1",
       "phone": "0644832235",
-      "email": "dlimi@gmail.com",
-      "password": "12344",
-      "role": "Company",
-      "LoggedIn": false,
-      "offers": []
-    },
-    {
-      "id": "b6e4",
-      "companyName": "test",
-      "phone": "0644832235",
-      "email": "dlimi@gmail.com",
-      "password": "12344",
-      "role": "Company",
+      "email": "company@gmail.com",
+      "password": "12345",
+      "role": "COMPANY",
       "LoggedIn": false,
       "offers": [
         {
-          "id": "mDFm",
-          "title": "eeeeeeeeeee",
-          "place": "eeeeeeeeeeeee",
-          "salary": "444444444444",
-          "description": "eeeeeeeeeeeeee"
+          "id": "I6CE",
+          "title": "JAVA DEVELOPPER",
+          "place": "Casablanca",
+          "salary": "11000",
+          "skills": [
+            "JAVA",
+            "ANGULAR",
+            "SQL"
+          ],
+          "description": "Building fullstack"
         },
         {
-          "title": "jjjjjjjjj",
-          "place": "hhhhhhhhhhhhhh",
-          "salary": "666666666666",
-          "description": "hhhhhhhhhhh",
-          "id": "ZdpL"
+          "id": "vgtM",
+          "title": "Product OWNER",
+          "place": "Rabat",
+          "salary": "13000",
+          "skills": [
+            "Agile",
+            "COMUNICATION"
+          ],
+          "description": "Describing Epics"
+        },
+        {
+          "id": "ecVB",
+          "title": "ASP .NET DEVELOPPER",
+          "place": "Tanger",
+          "salary": "9000",
+          "skills": [
+            "C#",
+            ".Net",
+            "SQL",
+            ".Net",
+            "SQL"
+          ],
+          "description": "Backend side"
+        },
+        {
+          "id": "ihHF",
+          "title": "REACT DEVELOPPER",
+          "place": "Agadr",
+          "salary": "14000",
+          "skills": [
+            "Js",
+            "React",
+            "Tailwind"
+          ],
+          "description": "8 Years of exp"
+        },
+        {
+          "id": "Z3Xv",
+          "title": "SCRUM MASTER",
+          "place": "Rabat",
+          "salary": "16000",
+          "skills": [
+            "Agile",
+            "JAVA"
+          ],
+          "description": "master scrum master role"
+        },
+        {
+          "id": "vgtM",
+          "title": "Product OWNER",
+          "place": "Rabat",
+          "salary": "13000",
+          "skills": [
+            "Agile",
+            "COMUNICATION"
+          ],
+          "description": "Describing Epics"
         }
       ]
     }
   ],
-
   "postulations": [
     {
       "id": "1",

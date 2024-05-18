@@ -63,6 +63,20 @@
         <label for="description" class="form-label">Description</label>
         <input type="textarea" formControlName="description" class="form-control" id="description">
       </div>
+      <div class="mb-3">
+        <form (ngSubmit)="addSkill()">
+          <label for="skill" class="form-label">Skill</label>
+          <div class="d-flex">
+            <input class="w-50" type="textarea" [(ngModel)]="skill" [ngModelOptions]="{standalone:true}"  class="form-control" id="skill">
+            <button type="submit" class="w-50">Add Skill</button>
+          </div>
+          <div class="d-flex">
+            @for (skill of skillss; track $index) {
+              <button class="btn btn-sm m-2 small" (click)="removeSkill(skill)">{{skill}}</button>
+            }
+          </div>
+        </form>
+      </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" (click)="modal?.hide()">Close</button>
         <button type="submit" [disabled]="!form.valid" class="btn btn-primary">Add</button>
