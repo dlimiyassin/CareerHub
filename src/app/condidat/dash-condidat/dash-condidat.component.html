@@ -1,4 +1,3 @@
-
 <nav class="nav nav-pills justify-content-between">
   <p class="title">Career Hub</p>
   <button 
@@ -19,7 +18,10 @@
   ariaCurrentWhenActive="page">
     Profile
 </button>
-  <button (click)="signOut()" class="btn mx-3">Sign Out</button>  
+  <div class="d-block">
+    <button (click)="signOut()" class="btn mx-3">Sign Out</button>
+  </div>
 </nav>
-
-  <router-outlet />
+<div class="navbar-container">
+  <router-outlet></router-outlet>
+</div>

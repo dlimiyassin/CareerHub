@@ -7,6 +7,19 @@
   letter-spacing: 1.5px;
 }
 
+thead, tbody, td, tr, th {
+  background-color: #F1EAFF;
+}
+
+table {
+  border-collapse: separate; 
+  border-spacing: 0;
+  border-radius: 15px; 
+  overflow: hidden; 
+  width: 100%;
+  border: 1px solid #ccc; 
+  box-shadow: #C3ACD0 0px 7px 29px 0px;
+}
 
 button {
   pointer-events: auto;
