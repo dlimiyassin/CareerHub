@@ -1,11 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Postulation } from '../../models/postulation.model';
-import { Offer } from '../../models/offer.model';
-import { Candidate } from '../../models/candidate.model';
-
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
-import { CompanyService } from '../../services/company.service';
 
 @Component({
   selector: 'app-dash-condidat',
