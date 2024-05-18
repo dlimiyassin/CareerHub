@@ -21,10 +21,10 @@ import { AuthCompanyGuardService } from './guards/auth-company-guard.service';
 import { AuthCandidateGuardService } from './guards/auth-candidate-guard.service';
 
 const routes: Routes = [
-  {path:'', component:HomeComponent, title: 'Home'},
-  {path:'company-sign-up', component:CompanySignUpComponent, title: 'Sign Up'},
-  {path:'condidat-sign-up', component:CondidatSignUpComponent, title: 'Sign Up'},
-  {path:'choose-sign', component:ChooseSignMethodComponent, title: 'Sign Up'},
+  {path:'', component:HomeComponent, title: 'Home',canActivate :[NoAuthGuardService]},
+  {path:'company-sign-up', component:CompanySignUpComponent, title: 'Sign Up',canActivate :[NoAuthGuardService]},
+  {path:'condidat-sign-up', component:CondidatSignUpComponent, title: 'Sign Up',canActivate :[NoAuthGuardService]},
+  {path:'choose-sign', component:ChooseSignMethodComponent, title: 'Sign Up',canActivate :[NoAuthGuardService]},
   {path:'sign-in', component:SignInComponent, title: 'Sign Up',canActivate :[NoAuthGuardService]},
 
 
