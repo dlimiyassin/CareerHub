@@ -32,7 +32,7 @@ const routes: Routes = [
    children : [
     {path:'', component:DashCondidatComponent, title:'Dashboard'},
     {path:'cv', component:CompleteProfileComponent, title:'Profile'},
-    {path:'offers', component:OffersComponent, title:'Profile'},
+    {path:'offers', component:OffersComponent, title:'Offers'},
     {path:'profile', component:ProfileComponent, title:'Profile'},
     {path:'posts', component:PostsComponent, title:'Posts'}
   ],canActivate : [AuthCandidateGuardService]
