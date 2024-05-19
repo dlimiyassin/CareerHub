@@ -6,6 +6,7 @@ import { AuthService } from '../../services/auth.service';
 import { CompanyService } from '../../services/company.service';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { CandidateService } from '../../services/candidate.service';
+import { Observable, map, of } from 'rxjs';
 
 
 @Component({
@@ -27,41 +28,59 @@ export class OffersComponent {
     this.modal = this.modalService.show(template);
     this.offer_id = offer_id
   }
-  offer_id : string | undefined
+  offer_id     : string | undefined
   company_id   : string | undefined
   candidate_id : string | undefined
-  offer_note : string | undefined
+  offer_note   : string | undefined
+  company_name : string | undefined
+
+
   apply(){
-    this.getCompanyByOffer(this.offer_id)
-    this.candidate_id = this.authService.getUserID() as string
-    const post : Postulation | undefined = {
-      offer_id : this.offer_id as string,
-      candidate_id : this.candidate_id,
-      company_id : this.company_id as string,
-      date : new Date(),
-      note : this.offer_note as string
-    }
-    this.candidateService.addPost(post).subscribe({
-      next : data => {console.log(data); this.modal?.hide() ;this.offer_note=''}
+    this.candidate_id = this.authService.getUserID() as string    
+    this.getCompanyByOffer(this.offer_id).subscribe({
+      next: data => {
+        console.log(data);
+        
+        const post : Postulation | undefined = {
+          company_name : data?.companyName as string,
+          company_id : data?.companyId as string,
+          offer_id : this.offer_id as string,
+          candidate_id : this.candidate_id as string,
+          date : new Date(),
+          note : this.offer_note as string
+        }                
+        this.candidateService.addPost(post).subscribe({
+          next : () => {
+            this.modal?.hide();
+            this.offer_note=''
+          }
+        })
+      },
+      error: err => {console.log(err);
+      }
     })
+
   }
 
 
-  getCompanyByOffer(offerId : string | undefined){
-  this.companyService.getCompanies().subscribe({
-    next: companies => {
-      companies.some(company => {
-        return company.offers.some(offer => {
-          if (offer.id == offerId) {
-            this.company_id = company.id;
-            return true;
+  getCompanyByOffer(offerId : string | undefined) :Observable<{companyId : string, companyName : string} | null> {
+    
+    if(offerId == undefined){
+      return of(null)
+    }
+
+    return this.companyService.getCompanies().pipe(
+      map(companies => {
+        for (let company of companies) {
+          for (let offer of company.offers) {
+            if (offer.id === offerId) {
+              return { companyId: company.id as string, companyName: company.companyName as string };
+            }
           }
-          return false;
-        });
-      });
-    },
-    error: err => {console.error(err);}
-  });
+        }
+        return null;
+      })
+    );
 }
 
 

@@ -1,7 +1,10 @@
 .navbar-container {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
+  min-height: 90vh;
   background-color: #F1EAFF;
+  z-index: 1;
+  position: relative;
 }
 
 nav {
