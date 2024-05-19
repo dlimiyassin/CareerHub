@@ -5,7 +5,7 @@
       <div class="row row-cols-4 mx-5">
         @for (offer of offers; track $index) {
           <div class="col my-4">
-            <div class="card stretched-link">
+            <div class="cardd stretched-link">
               <p class="heading">{{offer.title}}</p>
               <ul class="overflow-hide" style="max-height: 100px; overflow: hidden;">
                 @for (skill of offer.skills; track $index) {
@@ -18,7 +18,7 @@
                   <p><i class="bi bi-geo-alt"></i>  {{offer.place}}</p>
                   <p><i class="bi bi-currency-dollar"></i>  {{offer.salary}}</p>
                 </div>
-                <button class="me-0" routerLink="/" >Apply</button>
+                <button class="me-0" (click)="openModal(post,offer.id)" >Apply</button>
               </div>
             </div>
           </div>
@@ -29,3 +29,19 @@
     </div>
   </main>  
  
+<ng-template #post>
+  <div class="card">
+    <div class="card-header">
+      Confirm Application
+    </div>
+    <form (ngSubmit)="apply()">
+      <div class="card-body">
+        <label for="offer_id">Note</label>
+        <input type="text" id="offer_id" name="offer_id" [(ngModel)]="offer_note">
+      </div>
+      <div class="card-footer">
+        <button type="submit">Apply</button>
+      </div>
+    </form>
+  </div>
+</ng-template>

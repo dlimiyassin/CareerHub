@@ -144,10 +144,18 @@
   ],
   "postulations": [
     {
-      "id": "1",
-      "offer": "offer",
-      "Candidate": "1234",
-      "date": "2023"
+      "id": "99a6",
+      "offer_id": "I6CE",
+      "candidate_id": "1",
+      "date": "2024-05-19T01:33:31.350Z",
+      "note": "test"
+    },
+    {
+      "id": "07ce",
+      "offer_id": "vgtM",
+      "candidate_id": "1",
+      "date": "2024-05-19T01:40:00.234Z",
+      "note": "test"
     }
   ]
 }

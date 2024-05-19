@@ -2,8 +2,10 @@ import { Candidate } from "./candidate.model";
 import { Offer } from "./offer.model";
 
 export interface Postulation {
-  id: number;
+  id? : string,
+  offer_id: string;
+  candidate_id: string;
+  company_id : string;
+  note : string;
   date: Date;
-  candidate: Candidate;
-  offer: Offer;
 }

@@ -25,10 +25,10 @@ export class CandidatePostulerCompanyComponent implements OnInit {
 
   constructor(private offerService : OfferService,private route : ActivatedRoute ){}
 
-  getCandidatePostuler(){
+/*   getCandidatePostuler(){
   this.offerService.getCandidatesPostuler(String(this.id)).subscribe((data)=>{
     this.canidates = data
   })
-  }
+  } */
 
 }

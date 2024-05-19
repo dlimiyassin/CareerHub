@@ -45,7 +45,7 @@
 
 
 
-  .card {
+  .cardd {
     position: relative;
     width: 260px;
     height: 254px;
@@ -60,7 +60,7 @@
     color: white;
   }
   
-  .card::before {
+  .cardd::before {
     content: '';
     position: absolute;
     inset: 0;
@@ -75,7 +75,7 @@
     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
   
-  .card::after {
+  .cardd::after {
     content: "";
     z-index: -1;
     position: absolute;
@@ -91,20 +91,20 @@
     font-weight: 700;
   }
   
-  .card p:not(.heading) {
+  .cardd p:not(.heading) {
     font-size: 14px;
   }
   
-  .card p:last-child {
+  .cardd p:last-child {
     color: #e81cff;
     font-weight: 600;
   }
   
-  .card:hover::after {
+  .cardd:hover::after {
     filter: blur(30px);
   }
   
-  .card:hover::before {
+  .cardd:hover::before {
     transform: rotate(-90deg) scaleX(1.18) scaleY(0.87);
   }
   
