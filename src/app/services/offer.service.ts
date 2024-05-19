@@ -34,12 +34,7 @@ export class OfferService {
     return this.http.get(`${this.api}/${id}`)
   }
 
-/*   getCandidatesPostuler(id : string) : Observable<any>{
-    return this.http.get<Postulation[]>(this.apiP).pipe(
-      map((postulations : Postulation[])=>
-      postulations
-      .filter(postulation=> postulation.offer.id = id )
-      .map(postulation => postulation.candidate)
-    ))
-    } */
+   getCandidatesPostuler(id : string) : Observable<any>{
+    return this.http.get<Postulation[]>(this.apiP)
+    } 
 }

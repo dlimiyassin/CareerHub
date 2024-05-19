@@ -46,7 +46,7 @@ const routes: Routes = [
   children : [
    {path:'offer', component : OfferCompanyComponent, title : 'Offer'},
    {path : 'candidate', component : CandidateCompanyComponent , title :'candidate'},
-   {path : 'candidate-post/:id', component : CandidatePostulerCompanyComponent}
+   {path : 'candidates-post/:id', component : CandidatePostulerCompanyComponent, title:'Posts'}
  ], canActivate : [AuthCompanyGuardService]},
 
 ];

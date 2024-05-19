@@ -12,10 +12,11 @@ import { __param } from 'tslib';
   styleUrl: './candidate-postuler-company.component.css'
 })
 export class CandidatePostulerCompanyComponent implements OnInit {
+ 
+  constructor(private offerService : OfferService,private route : ActivatedRoute ){}
+ 
   canidates : Candidate[]=[]
   id! : number
-
-
 
   ngOnInit(): void {
   this.route.params.subscribe(params=>{
@@ -23,7 +24,6 @@ export class CandidatePostulerCompanyComponent implements OnInit {
   })
   }
 
-  constructor(private offerService : OfferService,private route : ActivatedRoute ){}
 
 /*   getCandidatePostuler(){
   this.offerService.getCandidatesPostuler(String(this.id)).subscribe((data)=>{

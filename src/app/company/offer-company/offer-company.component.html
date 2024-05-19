@@ -1,5 +1,7 @@
+<h2 class="ms-5 pt-4 fw-bold">Offers</h2>
+<hr class="ms-5" style="width: 140px;">
 <div class="container">
-  <button type="button" class="btn btn-primary" (click)="openModal(template)">
+  <button type="button" class="mx-auto" (click)="openModal(template)">
     Add Offer
   </button>
   <table class="table table-hover mt-5">
@@ -19,6 +21,7 @@
       <td>{{o.place}}</td>
       <td>{{o.salary}}</td>
       <td>
+        <a routerLink="/company/candidates-post/{{o.id}}">Posts</a>
         <button (click)="openUpdate(templateEdit,o.id)" class="btn edit"><i class="bi bi-pencil-square"></i></button>
         <button (click)="delete(o.id)" class="btn supp mx-2"><i class="bi bi-trash"></i></button>
       </td>

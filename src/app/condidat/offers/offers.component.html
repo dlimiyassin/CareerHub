@@ -30,18 +30,15 @@
   </main>  
  
 <ng-template #post>
-  <div class="card">
-    <div class="card-header">
-      Confirm Application
-    </div>
-    <form (ngSubmit)="apply()">
-      <div class="card-body">
-        <label for="offer_id">Note</label>
-        <input type="text" id="offer_id" name="offer_id" [(ngModel)]="offer_note">
+  <div class="form-container">
+    <form (ngSubmit)="apply()" class="form">
+      <div class="form-group">
+        <label for="textarea">Add Your Note</label>
+        <textarea name="textarea" id="textarea" rows="10" cols="50" [(ngModel)]="offer_note" required="">          </textarea>
       </div>
-      <div class="card-footer">
-        <button type="submit">Apply</button>
-      </div>
+      <button type="submit" class="form-submit-btn" type="submit">Apply</button>
     </form>
   </div>
 </ng-template>
+
+
