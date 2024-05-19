@@ -1,8 +1,27 @@
 <nav class="nav nav-pills justify-content-between">
-    <p class="title">Career Hub</p>
-    <div class="d-block">
-        <button (click)="signOut()" class="btn mx-3">Sign Out</button>          
-    </div>
-  
-  </nav>
-<h1 class="text-center">CONDIDATE DASHBOARD</h1>
+  <p class="title">Career Hub</p>
+  <button 
+          routerLink="/candidate/offers" 
+          routerLinkActive="activebutton"
+          ariaCurrentWhenActive="page">
+    Offers
+  </button>
+  <button 
+          routerLink="/candidate/posts" 
+          routerLinkActive="activebutton"
+          ariaCurrentWhenActive="page">
+    Posts
+  </button>
+  <button 
+  routerLink="/candidate/profile" 
+  routerLinkActive="activebutton"
+  ariaCurrentWhenActive="page">
+    Profile
+</button>
+  <div class="d-block">
+    <button (click)="signOut()" class="btn mx-3">Sign Out</button>
+  </div>
+</nav>
+<div class="navbar-container">
+  <router-outlet></router-outlet>
+</div>

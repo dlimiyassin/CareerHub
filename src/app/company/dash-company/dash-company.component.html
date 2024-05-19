@@ -1,11 +1,21 @@
 <nav class="nav nav-pills justify-content-between">
   <p class="title">Career Hub</p>
-  <button routerLink="/company/offer" class="btn mx-3">Offer</button>
-  <button routerLink="/company/candidate" class="btn mx-3">Candidates</button>
+  <button 
+          routerLink="/company/offer" 
+          routerLinkActive="activebutton"
+          ariaCurrentWhenActive="page">
+    Offers
+  </button>
+  <button 
+          routerLink="/company/candidate" 
+          routerLinkActive="activebutton"
+          ariaCurrentWhenActive="page">
+    Candidates
+  </button>
   <div class="d-block">
-  <button (click)="signOut()" class="btn mx-3">Sign Out</button>
+    <button (click)="signOut()" class="btn mx-3">Sign Out</button>
   </div>
-
 </nav>
-<h1 class="text-center">COMPANY DASHBOARD</h1>
-
+<div class="navbar-container">
+  <router-outlet></router-outlet>
+</div>

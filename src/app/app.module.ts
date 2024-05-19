@@ -16,7 +16,9 @@ import { CandidateCompanyComponent } from './company/candidate-company/candidate
 import { CandidatePostulerCompanyComponent } from './company/candidate-postuler-company/candidate-postuler-company.component';
 import { CompleteProfileComponent } from './condidat/complete-profile/complete-profile.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
-
+import { ProfileComponent } from './condidat/profile/profile.component';
+import { PostsComponent } from './condidat/posts/posts.component';
+import { OffersComponent } from './condidat/offers/offers.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,10 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     OfferCompanyComponent,
     CandidateCompanyComponent,
     CandidatePostulerCompanyComponent,
-    CompleteProfileComponent
+    CompleteProfileComponent,
+    ProfileComponent,
+    PostsComponent,
+    OffersComponent
   ],
   imports: [
     BrowserModule,

@@ -36,7 +36,7 @@ export class SignInComponent {
           console.log(this.user);
           showErrorMessage = true
           this.handleUser(this.user)
-          this.route.navigateByUrl("/candidate")
+          this.route.navigateByUrl("/candidate/offers")
         }
       },
       error: (err) => {}
@@ -49,7 +49,7 @@ export class SignInComponent {
           console.log(this.user);
           showErrorMessage = true
           this.handleUser(this.user)
-          this.route.navigateByUrl("/company")
+          this.route.navigateByUrl("/company/offer")
         }
       },
       error: (err) => {}

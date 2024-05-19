@@ -32,16 +32,16 @@ export class OfferCompanyComponent implements OnInit{
   candidates : Candidate[]=[]
 
   form : FormGroup = this.formBuilder.group({
-    title : [null,Validators.minLength(3)],
-    place : [null,Validators.minLength(5)],
+    title : [null,[Validators.minLength(3),Validators.maxLength(20)]],
+    place : [null,[Validators.minLength(3),Validators.maxLength(20)]],
     salary: [null],
-    description : [null,Validators.minLength(10)]
+    description : [null,[Validators.minLength(3),Validators.maxLength(20)]]
   })
   edit : FormGroup = this.formBuilder.group({
-    title : [null,Validators.minLength(3)],
-    place : [null,Validators.minLength(5)],
+    title : [null,[Validators.minLength(3),Validators.maxLength(20)]],
+    place : [null,[Validators.minLength(3),Validators.maxLength(20)]],
     salary: [null],
-    description : [null,Validators.minLength(10)]
+    description : [null,[Validators.minLength(3),Validators.maxLength(20)]]
   })
 
   modal? : BsModalRef
@@ -56,13 +56,26 @@ export class OfferCompanyComponent implements OnInit{
     this.companyService.getCompanyById(id).subscribe({
       next: company => {  this.company  = company,
                           this.offers = company.offers
-                         console.log(this.company);
       },
       error: err => {console.log(err);
       }
     })
   }
   //********  l'ajout **********
+  skillss : string[] = []
+  skill : string =''
+  addSkill(){
+    if(this.skill){
+      this.skillss.push(this.skill as string)  
+      this.skill=''
+    }
+  }
+  removeSkill(skill : string){
+    console.log(this.skillss);
+    this.skillss = this.skillss.filter(s => s != skill)
+    console.log(this.skillss);
+
+  }
   addOffer(){
   if(this.form.valid){
 
@@ -71,14 +84,18 @@ export class OfferCompanyComponent implements OnInit{
       title : this.form.get('title')?.value ,
       place : this.form.get('place')?.value,
       salary : this.form.get('salary')?.value ,
+      skills : this.skillss,
       description: this.form.get('description')?.value
     }
+    console.log(off);
+    
     this.company.offers.push(off)
     this.offerService.addOffer(this.company).subscribe({
       next : (company) => {
         this.offers = company.offers
         this.form.reset()
         this.modal?.hide()
+        this.skillss=[]
       }
     })
   }

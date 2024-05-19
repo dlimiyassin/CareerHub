@@ -1,18 +1,10 @@
-<nav class="nav nav-pills justify-content-between">
-  <p class="title">Career Hub</p>
-  <button routerLink="/company/offer" class="btn mx-3">Offer</button>
-  <button routerLink="/company/candidate" class="btn mx-3">Candidates</button>
-  <div class="d-block">
-  <button routerLink="/sign-in" class="btn mx-3">Sign Out</button>
-  </div>
-</nav>
-
-
+<h2 class="ms-5 pt-4 fw-bold">Offers</h2>
+<hr class="ms-5" style="width: 140px;">
 <div class="container">
-  <button type="button" class="btn btn-primary" (click)="openModal(template)">
+  <button type="button" class="mx-auto" (click)="openModal(template)">
     Add Offer
   </button>
-  <table class="table mt-5">
+  <table class="table table-hover mt-5">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -29,6 +21,7 @@
       <td>{{o.place}}</td>
       <td>{{o.salary}}</td>
       <td>
+        <a routerLink="/company/candidates-post/{{o.id}}">Posts</a>
         <button (click)="openUpdate(templateEdit,o.id)" class="btn edit"><i class="bi bi-pencil-square"></i></button>
         <button (click)="delete(o.id)" class="btn supp mx-2"><i class="bi bi-trash"></i></button>
       </td>
@@ -62,6 +55,20 @@
       <div class="mb-3">
         <label for="description" class="form-label">Description</label>
         <input type="textarea" formControlName="description" class="form-control" id="description">
+      </div>
+      <div class="mb-3">
+        <form (ngSubmit)="addSkill()">
+          <label for="skill" class="form-label">Skill</label>
+          <div class="d-flex">
+            <input class="w-50" type="textarea" [(ngModel)]="skill" [ngModelOptions]="{standalone:true}"  class="form-control" id="skill">
+            <button type="submit" class="w-50">Add Skill</button>
+          </div>
+          <div class="d-flex">
+            @for (skill of skillss; track $index) {
+              <button class="btn btn-sm m-2 small" (click)="removeSkill(skill)">{{skill}}</button>
+            }
+          </div>
+        </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" (click)="modal?.hide()">Close</button>

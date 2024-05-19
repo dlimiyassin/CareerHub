@@ -1,8 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Postulation } from '../../models/postulation.model';
-import { Offer } from '../../models/offer.model';
-import { Candidate } from '../../models/candidate.model';
-
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 
@@ -13,30 +9,10 @@ import { AuthService } from '../../services/auth.service';
 })
 
 
-export class DashCondidatComponent implements OnInit{
-
-
-
+export class DashCondidatComponent{
   constructor(private route : Router, private authService : AuthService){}
 
-  postulations : Postulation[]=[]
-  offers : Offer[] = []
-  ngOnInit(): void {
-
-  }
-
-  postuler(offer : Offer,candidate :Candidate){
-    const newPostulation : Postulation = {
-      id : this.postulations.length + 1 ,
-      date : new Date(),
-      candidate : candidate,
-      offer : offer
-    }
-    this.postulations.push(newPostulation)
-  }
-
-
-signOut(){
+  signOut(){
   this.authService.clearLocalStorage()
   this.route.navigateByUrl("/sign-in")
   }

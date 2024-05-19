@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Candidate } from '../models/candidate.model';
+import { Postulation } from '../models/postulation.model';
 
 @Injectable({
   providedIn: 'root'
@@ -24,4 +25,11 @@ export class CandidateService {
     return this.http.delete(`${this.api}/${id}`)
   }
 
+  addPost(post : Postulation) : Observable<any>{
+    return this.http.post('http://localhost:3000/postulations',post)
+  }
+
+  getPosts() : Observable<Postulation[]>{
+    return this.http.get<Postulation[]>('http://localhost:3000/postulations')
+  }
 }
