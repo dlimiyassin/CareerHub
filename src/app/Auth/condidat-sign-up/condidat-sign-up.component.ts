@@ -90,7 +90,7 @@ signUp(){
     }
     this.authService.signUpCandidate(cred).subscribe({
       next: (rep) => {
-        this.route.navigateByUrl("/sign-in")
+        this.route.navigateByUrl("/candidate/cv")
         this.condidatForm.reset()
       },
       error: (err) => {console.log(err);

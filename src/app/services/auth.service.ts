@@ -24,6 +24,7 @@ export class AuthService {
   getCompanies() : Observable<Company[]> {
     return this.http.get<Company[]>("http://localhost:3000/companies")
   }
+  
   saveToLocalStorage(user : any){
     localStorage.setItem('id', user.id)
     localStorage.setItem('email', user.email)

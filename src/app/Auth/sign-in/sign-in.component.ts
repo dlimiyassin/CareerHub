@@ -46,7 +46,6 @@ export class SignInComponent {
       next : (users) => {
         const isExist = this.isExist(users,this.Loginform.get('email')?.value,this.Loginform.get('password')?.value)
         if(isExist){
-          console.log(this.user);
           showErrorMessage = true
           this.handleUser(this.user)
           this.route.navigateByUrl("/company/offer")

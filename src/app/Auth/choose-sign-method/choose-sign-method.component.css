@@ -3,17 +3,23 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
-    background-color: rgb(29, 35, 48);
+    background-color: rgb(0, 0, 0);
     padding: 15vh;
   }
   
 .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-inline: 50px;
     width: 620px;
-    height: 300px;
-    border-radius: 0.75rem;
-    background-color: rgba(17, 24, 39, 1);
+    height: fit-content;
+    border-radius: 25px;
+    background-color: rgb(0, 0, 0);
     padding: 2rem;
     color: rgba(243, 244, 246, 1);
+    box-shadow: 0 0 10px 3px white;
   }
 
   button {

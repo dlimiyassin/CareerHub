@@ -1,11 +1,22 @@
 <body>
-    <div class="form-container">
-        <h1 class="text-center my-3">You Are</h1>
-        <div class="d-flex justify-content-center">
-            <button routerLink="/condidat-sign-up">condidat</button>
-            <button routerLink="/company-sign-up">comapny</button>
+    <div class="row">
+        <div class="col-6">
+            <div class="form-container">
+                <h1 class="text-center my-3">I'm a freelancer</h1>
+                <img class="text-center" src="../../../assets/img/freelancer.png" alt="company img" height="200px" width="200px">
+                <div class="d-flex justify-content-center">
+                    <button routerLink="/condidat-sign-up">candidate</button>
+                </div>
+            </div>
         </div>
-    </div>
-        
-    </body>
-    
+        <div class="col-6">
+            <div class="form-container">
+                <h1 class="text-center my-3">I'm a company</h1>
+                <img src="../../../assets/img/company.png" alt="company img" height="200px" width="200px">
+                <div class="d-flex justify-content-center">
+                    <button routerLink="/company-sign-up">comapny</button>
+                </div>
+            </div>
+        </div>
+    </div>        
+</body>

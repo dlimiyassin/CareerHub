@@ -13,6 +13,42 @@
       "skils": [
         "java"
       ]
+    },
+    {
+      "id": "32e8",
+      "firstName": "yassine",
+      "lastName": "dlimi",
+      "phone": "0644832235",
+      "email": "dlimiyassine@gmail.com",
+      "password": "35665yu",
+      "role": "CANDIDATE",
+      "LoggedIn": false,
+      "cv": "",
+      "skils": []
+    },
+    {
+      "id": "eecc",
+      "firstName": "yassine",
+      "lastName": "dlimi",
+      "phone": "0644832235",
+      "email": "dlimiyassi@gmail.com",
+      "password": "fghjkldf",
+      "role": "CANDIDATE",
+      "LoggedIn": false,
+      "cv": "",
+      "skils": []
+    },
+    {
+      "id": "5b8e",
+      "firstName": "yassine",
+      "lastName": "dlimi",
+      "phone": "0644832235",
+      "email": "dlimiyassjpiine13@gmail.com",
+      "password": "ctkcszx",
+      "role": "CANDIDATE",
+      "LoggedIn": false,
+      "cv": "",
+      "skils": []
     }
   ],
   "companies": [

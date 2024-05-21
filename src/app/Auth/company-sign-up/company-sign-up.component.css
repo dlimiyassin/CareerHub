@@ -4,14 +4,16 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: rgb(29, 35, 48);
+    background-color: rgb(0, 0, 0);
   }
 .form-container {
     width: 520px;
     border-radius: 0.75rem;
-    background-color: rgba(17, 24, 39, 1);
+    background-color: rgb(0, 0, 0);
     padding: 2rem;
     color: rgba(243, 244, 246, 1);
+    box-shadow: 0 0 10px 3px white;
+
   }
 
   
@@ -38,14 +40,18 @@ body {
     margin-bottom: 4px;
   }
   
-  .input-group input {
+  input {
     width: 100%;
     border-radius: 0.375rem;
-    border: 1px solid rgba(55, 65, 81, 1);
+    border: 1px solid #F1EAFF;
     outline: 0;
-    background-color: rgba(17, 24, 39, 1);
+    background-color: rgb(0, 0, 0);
     padding: 0.75rem 1rem;
-    color: rgba(243, 244, 246, 1);
+    color: rgb(255, 255, 255);
+  }
+
+  .input-group input:invalid {
+    border: 2px solid rgb(255, 102, 102);
   }
   
   .input-group input:focus {
@@ -73,7 +79,7 @@ body {
 }
   
 li {
-    color: rgb(255, 179, 0);
+    color: rgb(255, 76, 76);
     margin-top: 10px;
   }
 button:disabled {
