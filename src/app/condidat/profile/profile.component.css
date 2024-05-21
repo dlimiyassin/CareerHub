@@ -1,0 +1,30 @@
+.gradient-custom {
+  /* fallback for old browsers */
+  background: #f6d365;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right bottom,hsl(261deg 80% 48%),hsl(261, 80%, 65%));
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right bottom, hsl(261deg 80% 48%),hsl(261, 80%, 65%))
+  }
+
+  button{
+    background-color: hsl(0, 0%, 100%);
+    color : black
+  }
+
+  button:hover{
+    background-color: hsl(261deg 80% 48%);
+    color : white;
+
+  }
+  li{
+
+    list-style: none;
+  }
+
+  .sign{
+    margin-left: 150px;
+    
+  }

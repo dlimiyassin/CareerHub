@@ -90,11 +90,21 @@ signUp(){
     }
     this.authService.signUpCandidate(cred).subscribe({
       next: (rep) => {
-        this.route.navigateByUrl("/sign-in")
+        this.handleUser(rep)
+        this.route.navigateByUrl("/candidate/cv")
         this.condidatForm.reset()
       },
       error: (err) => {console.log(err);
       }
     })
+  }
+  handleUser(userr : Candidate | Company | undefined){
+    const user = {
+      id : userr?.id,
+      email : userr?.email ,
+      role  : userr?.role,
+      LoggedIn : true
+    }
+    this.authService.saveToLocalStorage(user)
   }
 }

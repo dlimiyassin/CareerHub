@@ -14,7 +14,7 @@ export class OfferService {
   candidates : Candidate[]=[]
 
   private api = 'http://localhost:3000/offers'
-  private apiP = 'http://localhost:3000/postulation'
+  private apiP = 'http://localhost:3000/postulations'
 
   constructor(private http : HttpClient) { }
 
@@ -34,7 +34,11 @@ export class OfferService {
     return this.http.get(`${this.api}/${id}`)
   }
 
-   getCandidatesPostuler(id : string) : Observable<any>{
+  getCandidatesPostuler(id : string) : Observable<any>{
     return this.http.get<Postulation[]>(this.apiP)
-    } 
+    }
+
+  getPostulation() : Observable<any>{
+    return this.http.get<Postulation[]>(this.apiP)
+  }
 }

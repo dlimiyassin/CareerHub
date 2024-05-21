@@ -15,7 +15,11 @@ export class CompleteProfileComponent {
   constructor(private candidateService: CandidateService, private authService: AuthService,private route : Router){}
 
   ngOnInit(): void {
-
+    this.candidateService.getCandidates().subscribe({
+      next:(candidates) => {
+        this.updatedCandidate = candidates.find((candidate : Candidate) => candidate.email = this.authService.getEmail() as string)
+      }
+    })
   }
 
   skills : string[] = []
@@ -24,20 +28,16 @@ export class CompleteProfileComponent {
   updatedCandidate! : Candidate
   addSkill(){
     this.skills.push(this.newSkill)
-    this.newSkill=''  
-    this.candidateService.getCandidates().subscribe({
-      next:(candidates) => {
-        this.updatedCandidate = candidates.find((candidate : Candidate) => candidate.email = this.authService.getEmail() as string)
-        this.updatedCandidate.skils = this.skills  
-      }
-    }) 
+    this.newSkill=''
+    this.updatedCandidate.skils = this.skills
+    console.log(this.updatedCandidate);
+
   }
 
   completeProfile(){
+
     this.updatedCandidate.cv = this.cv
-    console.log(this.updatedCandidate);
-    
     this.candidateService.updateCandidate(this.updatedCandidate).subscribe(data => console.log(data))
-    this.route.navigateByUrl("/candidate")
+    this.route.navigateByUrl("/candidate/offers")
   }
 }

@@ -1,17 +1,115 @@
 {
   "candidates": [
     {
-      "id": "1",
-      "email": "candidate@gmail.com",
-      "password": "12345",
+      "id": "9c98",
+      "firstName": "Said",
+      "lastName": "KADRAOUI",
+      "email": "mihidivimo@mailinator.com",
+      "password": "1234",
+      "phone": "0697670749",
+      "cv": "",
+      "skils": [
+        "vljh",
+        "hlhbjhk"
+      ]
+    },
+    {
+      "id": "6f4e",
+      "firstName": "Mourad",
+      "lastName": "KADRAOUI",
+      "email": "mourad@gmail.com",
+      "phone": "0697670749",
+      "cv": "C:\\fakepath\\Capture001.png",
+      "skils": [
+        "html",
+        "css",
+        "java"
+      ]
+    },
+    {
+      "id": "ceae",
+      "firstName": "Reece",
+      "lastName": "Deleon",
+      "phone": "+1 (835) 212-6157",
+      "email": "kadraoui@gmail.com",
+      "password": "1234",
       "role": "CANDIDATE",
       "LoggedIn": false,
-      "firstName": "firtsN",
-      "lastName": "lastN",
-      "phone": "0676543234",
-      "cv": "C:\\fakepath\\bac.pdf",
+      "cv": "",
       "skils": [
         "java"
+      ]
+    },
+    {
+      "id": "5900",
+      "firstName": "Merrill",
+      "lastName": "Reynolds",
+      "phone": "+1 (333) 718-2658",
+      "email": "yassine@gmail.com",
+      "password": "1234",
+      "role": "CANDIDATE",
+      "LoggedIn": false,
+      "cv": "",
+      "skils": []
+    },
+    {
+      "id": "b63b",
+      "firstName": "Nolan",
+      "lastName": "Foster",
+      "phone": "+1 (305) 801-8474",
+      "email": "bebygolaj@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "role": "CANDIDATE",
+      "LoggedIn": false,
+      "cv": "",
+      "skils": []
+    },
+    {
+      "id": "6552",
+      "firstName": "Hilary",
+      "lastName": "Douglas",
+      "phone": "+1 (125) 976-6061",
+      "email": "kawe@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "role": "CANDIDATE",
+      "LoggedIn": false,
+      "cv": "",
+      "skils": []
+    },
+    {
+      "id": "47fb",
+      "firstName": "Veda",
+      "lastName": "Soto",
+      "phone": "+1 (513) 595-8546",
+      "email": "mefaholot@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "role": "CANDIDATE",
+      "LoggedIn": false,
+      "cv": "",
+      "skils": []
+    },
+    {
+      "id": "108d",
+      "firstName": "Kathleen",
+      "lastName": "Reese",
+      "phone": "+1 (966) 228-5125",
+      "email": "supibekjgkjbak@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "role": "CANDIDATE",
+      "LoggedIn": false,
+      "cv": "",
+      "skils": []
+    },
+    {
+      "id": "3f2b",
+      "firstName": "yassine",
+      "lastName": "dlimi",
+      "email": "kadraoui@mailinator.com",
+      "phone": "+1 (224) 251-8162",
+      "cv": "C:\\fakepath\\Capture001.png",
+      "skils": [
+        "java",
+        "html"
       ]
     }
   ],
@@ -153,22 +251,22 @@
       "note": "i want 500$/day"
     },
     {
-      "id": "ba18",
+      "id": "55ff",
       "company_name": "Arx-shop",
       "company_id": "1",
-      "offer_id": "ecVB",
-      "candidate_id": "1",
-      "date": "2024-05-19T15:15:58.509Z",
-      "note": "i want 300$/day"
+      "offer_id": "I6CE",
+      "candidate_id": "48e4",
+      "date": "2024-05-19T23:08:35.507Z",
+      "note": "ffkslfgk"
     },
     {
-      "id": "b79b",
-      "company_name": "Arx-shop",
-      "company_id": "1",
-      "offer_id": "vgtM",
-      "candidate_id": "1",
-      "date": "2024-05-19T16:06:31.947Z",
-      "note": "josgp"
+      "id": "f8a5",
+      "company_name": "JobInTech",
+      "company_id": "5592",
+      "offer_id": "2ZiM",
+      "candidate_id": "6f4e",
+      "date": "2024-05-20T22:48:14.505Z",
+      "note": "jjj"
     }
   ]
 }

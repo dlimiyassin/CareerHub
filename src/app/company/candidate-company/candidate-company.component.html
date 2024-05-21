@@ -1,2 +1,33 @@
-<h2 class="ms-5 pt-4 fw-bold">Candidates</h2>
-<hr class="ms-5" style="width: 210px;">
+<h2 class="ms-5 pt-4 fw-bold">Find Your Mission Easly</h2>
+  <hr class="ms-5 w-25">
+  <main>
+    <div class="container-fluid mt-5 d-flex justify-content-around">
+      <div class="row row-cols-4 mx-5">
+        @for (c of candidates; track $index) {
+          <div class="col my-4">
+            <div class="cardd stretched-link">
+              <p class="heading">{{c.firstName}} {{c.lastName}}</p>
+              <ul class="overflow-hide" style="max-height: 100px; overflow: hidden;">
+                @for (skill of c.skils; track $index) {
+                  <li>{{skill}}</li>
+                }
+              </ul>
+              <hr class="my-0">
+              <div class="d-flex justify-content-between h-25">
+                <div class="d-grid">
+                  <p><i class="bi bi-geo-alt"></i>  {{c.email}}</p>
+                  <p><i class="bi bi-currency-dollar"></i>  {{c.phone}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+
+
+    </div>
+  </main>
+
+
+
+
