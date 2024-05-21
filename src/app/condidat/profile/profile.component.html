@@ -1,2 +1,132 @@
-<h2 class="ms-5 pt-4 fw-bold">Profile</h2>
-<hr class="ms-5" style="width: 140px;">
+<section class="vh-100" style="background-color: #f4f5f7;">
+  <div class="container py-5 h-100" style="width: 1400px;">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-lg-6 mb-4 mb-lg-0">
+        <div class="card mb-3" style="border-radius: .5rem;">
+          <div class="row g-0">
+            <div class="col-md-4 gradient-custom text-center text-white"
+              style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp"
+                alt="Avatar" class="img-fluid my-5" style="width: 80px;" />
+              <h5>{{candidate.firstName}} {{candidate.lastName}}</h5>
+
+              <i class="far fa-edit mb-5"></i>
+            </div>
+            <div class="col-md-8">
+              <div class="card-body p-4">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h6 class="d-inline">Information</h6>
+                <button class="btn d-inline" (click)="openUpdate(templateEdit)" style="margin-left: 160px;"><i class="bi bi-pencil-square"></i></button>
+
+                </div>
+                <hr class="mt-0 mb-4">
+                <div class="row pt-1">
+                  <div class="col-6 mb-3">
+                    <h6>Email</h6>
+                    <p class="text-muted">{{candidate.email}}</p>
+                  </div>
+                  <div class="col-6 mb-3">
+                    <h6>Phone</h6>
+                    <p class="text-muted">{{candidate.phone}}</p>
+                  </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center">
+                  <h6 class="mb-0">Skills</h6>
+                  <button class="btn " (click)="openUpdateSkills(templateEditSkills)">
+                      <i class="bi bi-pencil-square"></i>
+                  </button>
+                </div>
+
+                <hr class="mt-0 mb-4">
+                <div class="row pt-1" *ngFor="let skill of candidate?.skils">
+                  <div class="col-6 mb-3">
+
+                    <p class="text-muted">{{skill}}</p>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-start">
+                  <a href="#!"><i class="fab fa-facebook-f fa-lg me-3"></i></a>
+                  <a href="#!"><i class="fab fa-twitter fa-lg me-3"></i></a>
+                  <a href="#!"><i class="fab fa-instagram fa-lg"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Modal Edit -->
+
+<ng-template #templateEdit>
+  <div class="modal-header">
+    <h5 class="modal-title">Edit Profile</h5>
+    <button type="button" class="btn-close" (click)="modal?.hide()" aria-label="Close"></button>
+  </div>
+
+  <div class="modal-body">
+    <form [formGroup]="edit" (ngSubmit)="updateProfile()">
+      <div class="mb-3">
+        <label for="id" class="form-label">Id</label>
+        <input type="text" formControlName="id" class="form-control" id="title" readonly>
+      </div>
+      <div class="mb-3">
+        <label for="fisrtName" class="form-label">firstName</label>
+        <input type="text" formControlName="firstName" class="form-control" id="title">
+      </div>
+      <div class="mb-3">
+        <label for="lastName" class="form-label">lastName</label>
+        <input type="text" formControlName="lastName" class="form-control" id="lastName">
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">email</label>
+        <input type="text" formControlName="email" class="form-control" id="email">
+      </div>
+      <div class="mb-3">
+        <label for="phone" class="form-label">Phone</label>
+        <input type="text" formControlName="phone" class="form-control" id="phone">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="modal?.hide()">Close</button>
+        <button type="submit" class="btn btn-primary">Update</button>
+      </div>
+    </form>
+  </div>
+</ng-template>
+
+<!-- Modal Edit Skills -->
+<ng-template #templateEditSkills>
+  <div class="modal-header">
+    <h5 class="modal-title">Edit skills</h5>
+    <button type="button" class="btn-close" (click)="modalSkills?.hide()" aria-label="Close"></button>
+  </div>
+
+  <div class="modal-body">
+
+    <ul *ngFor="let skill of candidate.skils">
+      <div class="d-flex justify-content-between align-items-center">
+        <li>{{skill}}</li>
+        <button class="btn" type="button" (click)="removeSkill(skill)"><i class="bi bi-trash3"></i></button>
+      </div>
+
+    </ul>
+
+    <form>
+      <div class="input-group">
+          <input type="text" class="form-control" name="newSkill" id="newSkill" [(ngModel)]="newSkill" placeholder="Add Skill">
+          <button type="button" class="btn" (click)="addSkill()"><i class="bi bi-plus"></i></button>
+      </div>
+  </form>
+
+  <form class="form m-2" (ngSubmit)="updateSkills()">
+    <label for="fileUpload" class="mb-2 fw-bold text">Upload Resume</label><br>
+    <input type="file" id="fileUpload" class="form-control" [(ngModel)]="cv" [ngModelOptions]="{standalone: true}">
+    <button type="submit" class="sign btn m-2">Update</button>
+</form>
+
+  </div>
+</ng-template>

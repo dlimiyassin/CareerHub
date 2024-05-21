@@ -1,4 +1,6 @@
-<body>
+<div class="contentt">
+  <a class="pt-3 ms-4 fw-bold fs-3 text-white" routerLink="/">Career Hub</a>
+  <div class="main">
     <div class="form-container">
         <p class="title">Sign Up As Condidat</p>
         <form [formGroup]="condidatForm" (ngSubmit)="signUp()" class="form">
@@ -69,6 +71,5 @@
             <button type="submit" class="sign" [disabled]="condidatForm.invalid">Sign Up</button>
         </form>
     </div>
-        
-    </body>
-    
+  </div>
+</div>

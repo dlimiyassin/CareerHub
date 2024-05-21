@@ -17,6 +17,10 @@ export class CandidateService {
     return this.http.get(this.api)
   }
 
+  getCandidateById(id : string) : Observable<any>{
+    return this.http.get(`${this.api}/${id}`)
+  }
+
   updateCandidate(candidate : Candidate) : Observable<any>{
     return this.http.put(`${this.api}/${candidate.id}`,candidate)
   }
