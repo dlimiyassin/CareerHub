@@ -16,10 +16,17 @@ export class CompleteProfileComponent {
 
   ngOnInit(): void {
     this.candidateService.getCandidates().subscribe({
-      next:(candidates) => {
-        this.updatedCandidate = candidates.find((candidate : Candidate) => candidate.email = this.authService.getEmail() as string)
+      next: (candidates) => {
+        this.updatedCandidate = candidates.find((candidate: Candidate) => candidate.email == this.authService.getEmail() as string);
+      },
+      error: (err) => {
+        console.error('Error fetching candidates', err);
+      },
+      complete: () => {
+        console.log('Finished fetching candidates');
       }
-    })
+    });
+
   }
 
   skills : string[] = []

@@ -7,6 +7,7 @@ import { CompanyService } from '../../services/company.service';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { CandidateService } from '../../services/candidate.service';
 import { Observable, map, of } from 'rxjs';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Component({
@@ -15,7 +16,7 @@ import { Observable, map, of } from 'rxjs';
   styleUrl: './offers.component.css'
 })
 export class OffersComponent {
-  constructor(private modalService : BsModalService, private authService : AuthService,private companyService : CompanyService, private candidateService : CandidateService){}
+  constructor(private modalService : BsModalService, private authService : AuthService,private companyService : CompanyService, private candidateService : CandidateService,private toaster : ToastrService){}
 
   postulations : Postulation[]=[]
 
@@ -53,6 +54,7 @@ export class OffersComponent {
           next : () => {
             this.modal?.hide();
             this.offer_note=''
+            this.toaster.success("See post section","Applied Susseccfull", {timeOut : 5000})
           }
         })
       },

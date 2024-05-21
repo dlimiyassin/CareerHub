@@ -9,8 +9,13 @@ import { Candidate } from '../models/candidate.model';
 })
 export class HomeComponent {
   constructor(private http : HttpClient){}
-ngOnInit(): void {
+  backgroundImage!: string;
 
- 
-}
+  ngOnInit() {
+    const img = new Image();
+    img.src = '../../assets/img/background.jpg';
+    img.onload = () => {
+      this.backgroundImage = img.src;
+    };
+  }
 }

@@ -5,6 +5,7 @@ import { AuthService } from '../../services/auth.service';
 import { Candidate } from '../../models/candidate.model';
 import { Company } from '../../models/company.model';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-sign-in',
@@ -14,7 +15,7 @@ import { Router } from '@angular/router';
 export class SignInComponent {
 
 
-  constructor(private builedr : FormBuilder,private authService : AuthService, private route : Router){}
+  constructor(private builedr : FormBuilder,private authService : AuthService, private route : Router,private toaster : ToastrService){}
 
   Loginform : FormGroup = this.builedr.group({
   email    : [null, [Validators.required,Validators.email]],
@@ -28,15 +29,17 @@ export class SignInComponent {
 
 
   signIn(){
-  let showErrorMessage = false
+  let haveAcces = false
     this.authService.getCandidates().subscribe({
       next : (users) => {
         const isExist = this.isExist(users,this.Loginform.get('email')?.value,this.Loginform.get('password')?.value)
         if(isExist){
-          console.log(this.user);
-          showErrorMessage = true
+          haveAcces = true
+          console.log("candidate is exist : "+isExist);
+          console.log("candidate have access : "+haveAcces);
           this.handleUser(this.user)
           this.route.navigateByUrl("/candidate/offers")
+          this.toaster.success("Signed succesfully","Happy Day!", {timeOut : 4000})
         }
       },
       error: (err) => {}
@@ -46,14 +49,23 @@ export class SignInComponent {
       next : (users) => {
         const isExist = this.isExist(users,this.Loginform.get('email')?.value,this.Loginform.get('password')?.value)
         if(isExist){
-          showErrorMessage = true
+          haveAcces = true
+          console.log("company is exist : "+isExist);
+          console.log("company have access : "+haveAcces);
           this.handleUser(this.user)
           this.route.navigateByUrl("/company/offer")
+          this.toaster.success("Signed succesfully","Happy Day!", {timeOut : 4000})
+
         }
+        if(!haveAcces) {
+          console.log(!haveAcces);
+          
+          this.toaster.error("Incorrect crediantials","Signed Failed", {timeOut : 4000})
+        }  
       },
       error: (err) => {}
     })
-    if(!showErrorMessage) console.log("the email or password is incorrect");
+
   }
 
 
