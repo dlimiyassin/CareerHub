@@ -4,8 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Candidate } from '../../models/candidate.model';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
-import { Skils } from '../../models/skils.model';
-import { skip } from 'rxjs';
+
 
 @Component({
   selector: 'app-profile',

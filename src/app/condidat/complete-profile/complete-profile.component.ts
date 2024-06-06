@@ -17,7 +17,7 @@ export class CompleteProfileComponent {
   ngOnInit(): void {
     this.candidateService.getCandidates().subscribe({
       next:(candidates) => {
-        this.updatedCandidate = candidates.find((candidate : Candidate) => candidate.email = this.authService.getEmail() as string)
+        this.updatedCandidate = candidates.find((candidate : Candidate) => candidate.email === this.authService.getEmail() as string)
       }
     })
   }

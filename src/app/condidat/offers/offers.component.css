@@ -6,8 +6,8 @@
   margin-left: 50px;
   letter-spacing: 1.5px;
 }
- 
-  
+
+
   button {
     height: 40px;
     border-radius: 20px;
@@ -24,14 +24,14 @@
     font-weight: bold;
     transition: all 0.5s ease;
   }
-  
+
   button:hover {
     letter-spacing: 3px;
     background-color: hsl(261deg 80% 48%);
     color: hsl(0, 0%, 100%);
     box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
   }
-  
+
   button:active {
     letter-spacing: 3px;
     background-color: hsl(261deg 80% 48%);
@@ -40,7 +40,7 @@
     transform: translateY(10px);
     transition: 100ms;
   }
-  
+
 
 
 
@@ -59,7 +59,7 @@
     cursor: pointer;
     color: white;
   }
-  
+
   .cardd::before {
     content: '';
     position: absolute;
@@ -74,7 +74,7 @@
     pointer-events: none;
     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
-  
+
   .cardd::after {
     content: "";
     z-index: -1;
@@ -84,30 +84,30 @@
     transform: translate3d(0, 0, 0) scale(0.95);
     filter: blur(20px);
   }
-  
+
   .heading {
     font-size: 20px;
     text-transform: capitalize;
     font-weight: 700;
   }
-  
+
   .cardd p:not(.heading) {
     font-size: 14px;
   }
-  
+
   .cardd p:last-child {
     color: #e81cff;
     font-weight: 600;
   }
-  
+
   .cardd:hover::after {
     filter: blur(30px);
   }
-  
+
   .cardd:hover::before {
     transform: rotate(-90deg) scaleX(1.18) scaleY(0.87);
   }
-  
+
 
 
 
@@ -127,23 +127,23 @@
     box-sizing: border-box;
     border-radius: 16px;
   }
-  
+
   .form-container button:active {
     scale: 0.95;
   }
-  
+
   .form-container .form {
     display: flex;
     flex-direction: column;
     gap: 20px;
   }
-  
+
   .form-container .form-group {
     display: flex;
     flex-direction: column;
     gap: 2px;
   }
-  
+
   .form-container .form-group label {
     display: block;
     margin-bottom: 5px;
@@ -151,7 +151,7 @@
     font-weight: 600;
     font-size: 18px;
   }
-  
+
   .form-container .form-group input {
     width: 100%;
     padding: 12px 16px;
@@ -161,7 +161,7 @@
     background-color: transparent;
     border: 1px solid #414141;
   }
-  
+
   .form-container .form-group textarea {
     width: 100%;
     padding: 12px 16px;
@@ -173,21 +173,21 @@
     background-color: transparent;
     font-family: inherit;
   }
-  
+
   .form-container .form-group input::placeholder {
     opacity: 0.5;
   }
-  
+
   .form-container .form-group input:focus {
     outline: none;
     border-color: #e81cff;
   }
-  
+
   .form-container .form-group textarea:focus {
     outline: none;
     border-color: #e81cff;
   }
-  
+
   .form-container .form-submit-btn {
     display: flex;
     align-items: flex-start;
@@ -206,12 +206,11 @@
     cursor: pointer;
     border-radius: 6px;
   }
-  
+
   .form-container .form-submit-btn:hover {
     background-color: #fff;
     border-color: #fff;
   }
-  
-  
-  
-  
+
+
+

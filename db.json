@@ -1,20 +1,6 @@
 {
   "candidates": [
     {
-      "id": "1",
-      "email": "candidate@gmail.com",
-      "password": "12345",
-      "role": "CANDIDATE",
-      "LoggedIn": false,
-      "firstName": "firtsN",
-      "lastName": "lastN",
-      "phone": "0676543234",
-      "cv": "C:\\fakepath\\bac.pdf",
-      "skils": [
-        "java"
-      ]
-    },
-    {
       "id": "32e8",
       "firstName": "yassine",
       "lastName": "dlimi",
@@ -49,6 +35,59 @@
       "LoggedIn": false,
       "cv": "",
       "skils": []
+    },
+    {
+      "id": "7e9c",
+      "firstName": "Rho",
+      "lastName": "Terry",
+      "email": "zuxo@mailinator.com",
+      "phone": "+1 (264) 412-9476",
+      "cv": "",
+      "skils": [
+        "mlm"
+      ]
+    },
+    {
+      "id": "7ef8",
+      "firstName": "Clayton",
+      "lastName": "Sargent",
+      "phone": "+1 (665) 906-1784",
+      "email": "soukaina@gmail.com",
+      "password": "1234",
+      "role": "CANDIDATE",
+      "LoggedIn": false,
+      "cv": "",
+      "skils": [
+        "java"
+      ]
+    },
+    {
+      "id": "63f8",
+      "firstName": "nadia",
+      "lastName": "Chandler",
+      "email": "nadia1@gmail.com",
+      "phone": "+1 (463) 981-6904",
+      "cv": "",
+      "skils": [
+        "java",
+        "html",
+        "css"
+      ]
+    },
+    {
+      "id": "cf80",
+      "firstName": "amira",
+      "lastName": "KADRAOUI",
+      "phone": "0697670749",
+      "email": "amira@gmail.com",
+      "password": "1234",
+      "role": "CANDIDATE",
+      "LoggedIn": false,
+      "cv": "",
+      "skils": [
+        "java",
+        "html"
+      ]
     }
   ],
   "companies": [
@@ -142,7 +181,19 @@
       "password": "1234",
       "role": "COMPANY",
       "LoggedIn": false,
-      "offers": []
+      "offers": [
+        {
+          "id": "DboA",
+          "title": "java full ",
+          "place": "Rabat",
+          "salary": "2000",
+          "skills": [
+            "java",
+            "html"
+          ],
+          "description": "Laudantium et dolor"
+        }
+      ]
     },
     {
       "id": "5592",
@@ -176,6 +227,64 @@
           "description": "Voluptates esse nos"
         }
       ]
+    },
+    {
+      "id": "10cc",
+      "companyName": "Mullins and Rollins Associates",
+      "phone": "+1 (525) 418-1781",
+      "email": "xomysocoka@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "role": "COMPANY",
+      "LoggedIn": false,
+      "offers": []
+    },
+    {
+      "id": "f4cd",
+      "companyName": "Gonzales Stout Associates",
+      "phone": "+1 (866) 935-7471",
+      "email": "nadia@gmail.com",
+      "password": "1234",
+      "role": "COMPANY",
+      "LoggedIn": false,
+      "offers": [
+        {
+          "id": "QLVk",
+          "title": "Magna veritatis irur",
+          "place": "Minima soluta verita",
+          "salary": "2000",
+          "skills": [],
+          "description": "Voluptatum amet rem"
+        }
+      ]
+    },
+    {
+      "id": "d3f0",
+      "companyName": "Chambers and Terry LLC",
+      "phone": "+1 (553) 107-6528",
+      "email": "qevahy@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "role": "COMPANY",
+      "LoggedIn": false,
+      "offers": []
+    },
+    {
+      "id": "1298",
+      "companyName": "Molina Brady Trading",
+      "phone": "+1 (487) 948-9522",
+      "email": "sofie@gmail.com",
+      "password": "1234",
+      "role": "COMPANY",
+      "LoggedIn": false,
+      "offers": [
+        {
+          "id": "xeDL",
+          "title": "Modi mollitia repudi",
+          "place": "Tempora voluptate mo",
+          "salary": "Corporis error fugit",
+          "skills": [],
+          "description": "Ex distinctio Culpa"
+        }
+      ]
     }
   ],
   "postulations": [
@@ -205,6 +314,78 @@
       "candidate_id": "1",
       "date": "2024-05-19T16:06:31.947Z",
       "note": "josgp"
+    },
+    {
+      "id": "f1d7",
+      "company_name": "Arx-shop",
+      "company_id": "1",
+      "offer_id": "vgtM",
+      "candidate_id": "7e9c",
+      "date": "2024-05-21T13:39:18.360Z",
+      "note": "klklkl"
+    },
+    {
+      "id": "6a03",
+      "company_name": "Molina Brady Trading",
+      "company_id": "1298",
+      "offer_id": "xeDL",
+      "candidate_id": "84ce",
+      "date": "2024-05-22T15:00:16.861Z",
+      "note": "kdfldkfl"
+    },
+    {
+      "id": "97c5",
+      "company_name": "Arx-shop",
+      "company_id": "1",
+      "offer_id": "vgtM",
+      "candidate_id": "7ef8",
+      "date": "2024-06-05T13:45:02.226Z",
+      "note": "mlkmflkdmf"
+    },
+    {
+      "id": "bb83",
+      "company_name": "Molina Brady Trading",
+      "company_id": "1298",
+      "offer_id": "xeDL",
+      "candidate_id": "7ef8",
+      "date": "2024-06-06T10:05:45.939Z",
+      "note": "mlkdlfkld"
+    },
+    {
+      "id": "3a3d",
+      "company_name": "Gonzales Stout Associates",
+      "company_id": "f4cd",
+      "offer_id": "QLVk",
+      "candidate_id": "7ef8",
+      "date": "2024-06-06T10:05:58.944Z",
+      "note": "fsdfsdùlf"
+    },
+    {
+      "id": "e7b0",
+      "company_name": "JobInTech",
+      "company_id": "3a82",
+      "offer_id": "DboA",
+      "candidate_id": "7ef8",
+      "date": "2024-06-06T10:14:59.208Z",
+      "note": "JE SUIS INTERESSER"
+    },
+    {
+      "id": "1475",
+      "company_name": "Arx-shop",
+      "company_id": "1",
+      "offer_id": "I6CE",
+      "candidate_id": "63f8",
+      "date": "2024-06-06T10:35:12.683Z",
+      "note": "je suis interesseé"
+    },
+    {
+      "id": "bd5f",
+      "company_name": "Arx-shop",
+      "company_id": "1",
+      "offer_id": "I6CE",
+      "candidate_id": "cf80",
+      "date": "2024-06-06T11:06:22.522Z",
+      "note": "je suis intéressé"
     }
   ]
 }

@@ -18,6 +18,7 @@ export class CandidatePostulerCompanyComponent implements OnInit {
               private candidateService : CandidateService ){}
 
   canidates : Candidate[]=[]
+  postulations : Postulation[]=[]
   id! : string
 
   ngOnInit(): void {
@@ -25,24 +26,18 @@ export class CandidatePostulerCompanyComponent implements OnInit {
     this.id = params['id']
   })
   this.getCandidatePostuler()
+
   }
 
 
-/*   getCandidatePostuler(){
-  this.offerService.getCandidatesPostuler(String(this.id)).subscribe((data)=>{
-    this.canidates = data
-  })
-  } */
-
     getCandidatePostuler(){
-    let  postulations : Postulation[]=[]
-    this.offerService.getPostulation().subscribe((data)=>{
-    console.log(data)
-    postulations = data
-    console.log(data);
 
-    postulations = postulations.filter(postulation => postulation.offer_id=this.id)
-    postulations.forEach(elt=>{
+    this.offerService.getPostulation().subscribe((data)=>{
+    this.postulations = data
+
+    this.postulations = this.postulations.filter(postulation => postulation.offer_id === this.id)
+
+    this.postulations.forEach(elt=>{
       this.candidateService.getCandidateById(elt.candidate_id).subscribe((candidate)=>{
         this.canidates.push(candidate)
         console.log(candidate);
