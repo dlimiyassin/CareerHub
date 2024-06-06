@@ -7,6 +7,11 @@
 
 </nav>
 
-<div class="image">
+<div 
+    class="image" 
+    [ngStyle]="{ 'background-image': backgroundImage ? 'url(' + backgroundImage + ')' : '' }"
+    >
     <h1>Here You Can Find Your Deal</h1>
-</div>
+    <div *ngIf="!backgroundImage" class="spinner"></div>
+  </div>
+  

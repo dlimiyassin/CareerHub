@@ -1,11 +1,9 @@
 .gradient-custom {
-  /* fallback for old browsers */
+
   background: #f6d365;
 
-  /* Chrome 10-25, Safari 5.1-6 */
   background: -webkit-linear-gradient(to right bottom,hsl(261deg 80% 48%),hsl(261, 80%, 65%));
 
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background: linear-gradient(to right bottom, hsl(261deg 80% 48%),hsl(261, 80%, 65%))
   }
 
@@ -28,3 +26,21 @@
     margin-left: 150px;
     
   }
+section {
+  background-color: #F1EAFF;
+  padding-top: 70px;
+  width: 90vw;
+  height: 90vh;
+}
+
+.card {
+  height: 500px;
+  width: 1000px;
+  border-radius: .5rem;
+}
+
+#side {
+  height: 500px;
+  border-top-left-radius: .5rem;
+  border-bottom-left-radius: .5rem;
+}

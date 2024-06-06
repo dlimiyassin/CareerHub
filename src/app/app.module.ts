@@ -19,6 +19,10 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { ProfileComponent } from './condidat/profile/profile.component';
 import { PostsComponent } from './condidat/posts/posts.component';
 import { OffersComponent } from './condidat/offers/offers.component';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
+import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr'
 
 @NgModule({
   declarations: [
@@ -44,7 +48,14 @@ import { OffersComponent } from './condidat/offers/offers.component';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    ModalModule.forRoot()
+    LazyLoadImageModule,
+    ModalModule.forRoot(),
+    CommonModule,
+    BrowserAnimationsModule, 
+    ToastrModule.forRoot({
+      positionClass: 'toast-bottom-right',
+      preventDuplicates: true,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
